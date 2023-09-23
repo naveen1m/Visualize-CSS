@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import GetStartedPage from './pages/GetStartedPage';
 import { Hamburger } from './utils/Burger';
+import Navbar from './components/Navbar';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       }}
     >
       <Router>
+        <Navbar/>
         <Hamburger />
         <Routes>
 
