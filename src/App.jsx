@@ -18,8 +18,8 @@ function App() {
         <Hamburger />
         <Routes>
 
-          {/* <Route path='/' element={<Home />} /> */}
-          <Route path='/' element={<GetStartedPage />} />
+          <Route path='/' element={<Home />} />
+          {/* <Route path='/' element={<GetStartedPage />} /> */}
 
 
         </Routes>
