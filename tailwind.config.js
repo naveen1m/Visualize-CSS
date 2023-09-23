@@ -8,5 +8,9 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [
+    require("flowbite/plugin"),
+    require("./node_modules/tw-elements/dist/plugin.cjs"),
+  ],
+  darkMode: "class",
 };
