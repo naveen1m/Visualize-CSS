@@ -1,6 +1,7 @@
 export const navigationData = [
     {
         label: 'Get started',
+        link: '/getstarted'
     },
     {
         label: 'CSS Selector'
