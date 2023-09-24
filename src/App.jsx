@@ -16,12 +16,12 @@ function App() {
       }}
     >
       <Router>
-        <Navbar/>
+        <Navbar />
         <Hamburger />
         <Routes>
 
-          <Route path='/' element={<Home />} />
-          {/* <Route path='/' element={<GetStartedPage />} /> */}
+          {/* <Route path='/' element={<Home />} /> */}
+          <Route path='/' element={<GetStartedPage />} />
 
 
         </Routes>
