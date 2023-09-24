@@ -3,13 +3,13 @@ import { NavLink } from '@mantine/core';
 import { Link } from 'react-router-dom';
 import { navigationData } from './navigationData';
 
-function Sidebar2() {
+function Sidebar() {
     const [activeLabel, setActiveLabel] = useState(null);
 
     const handleNavLinkClick = (label) => {
         setActiveLabel(label);
-    };
 
+    };
     const renderNavLink = (data) => (
         <NavLink
             label={data.label}
@@ -31,7 +31,7 @@ function Sidebar2() {
     return (
         <Fragment>
 
-            <div className=' bg-stone-100  border-2 border-green-500 w-44 min-w-fit'>
+            <div className=' bg-stone-100 w-44 min-w-fit'>
                 {navigationData.map((item, index) => (
                     <div key={index}
                         className='text-2xl'
@@ -42,4 +42,4 @@ function Sidebar2() {
     )
 }
 
-export default Sidebar2
+export default Sidebar

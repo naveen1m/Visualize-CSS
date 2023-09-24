@@ -5,8 +5,8 @@ function Home() {
     return (
         <Fragment>
             <h1 className='text-3xl text-center text-violet-400'>Visualize CSS here!</h1>
-            <section className='h-screen'>
-            <Carousel_slide />
+            <section className='h-screen z-0'>
+                <Carousel_slide />
             </section>
 
         </Fragment>
