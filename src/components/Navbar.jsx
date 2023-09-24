@@ -1,15 +1,16 @@
 
 import React, { Fragment, useContext, useState } from "react";
-import { Hamburger } from "../utils/Burger";
 import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
 import SidebarContext from "../context/sidebarcontext";
 import { Menu } from '@mantine/core';
 import Sidebar from "./sidebar/Sidebar";
 import { Link } from "react-router-dom";
+import GetStartedContext from "../context/getstartedcontext";
 
 
 function Navbar() {
   const {sidebar, setSidebar} = useContext(SidebarContext); 
+  const {getstart} = useContext(GetStartedContext);
   const handleClick = ()=>{
     setSidebar(!sidebar);
   }
@@ -33,7 +34,7 @@ function Navbar() {
               />
             </a>
             <div className="inline-block " onClick={handleClick}>
-            {sidebar?<AiOutlineMenuUnfold size={25}/>:<AiOutlineMenuFold size={25}/>}
+            {getstart?sidebar?<AiOutlineMenuUnfold size={25}/>:<AiOutlineMenuFold size={25}/>:""}
             </div>
           </div>
 
@@ -45,32 +46,34 @@ function Navbar() {
             data-te-navbar-nav-ref
           >
             <li className="flex items-center ">
+              {getstart?"":
               <Menu trigger="hover" openDelay={100} closeDelay={400} offset={5} withArrow arrowPosition="center" arrowRadius={0} arrowSize={10} shadow="md" loop={true}
-                transitionProps={{ transition: 'SLIDE-DOWN', duration: 150 }}
-              >
-                <Menu.Target>
-                  <Link to='/getstarted'>
-                    <button
-                      type="button"
-                      data-te-ripple-init
-                      data-te-ripple-color="light"
-                      // className="mr-3 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                      className="mr-3 min-w-fit inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-primary-600    motion-reduce:transition-none hover: "
+              transitionProps={{ transition: 'SLIDE-DOWN', duration: 150 }}
+            >
+              <Menu.Target>
+                <Link to='/getstarted'>
+                  <button
+                    type="button"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                    // className="mr-3 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                    className="mr-3 min-w-fit inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-primary-600    motion-reduce:transition-none hover: "
 
-                    >
-                      Get Started &#9660;
-                    </button>
-                  </Link>
-                </Menu.Target>
+                  >
+                    Get Started &#9660;
+                  </button>
+                </Link>
+              </Menu.Target>
 
-                <Menu.Dropdown >
+              <Menu.Dropdown >
 
-                  <Sidebar />
+                <Sidebar />
 
 
-                </Menu.Dropdown>
-              </Menu>
+              </Menu.Dropdown>
+            </Menu>
 
+              }
               <button
                 type="button"
                 data-te-ripple-init
