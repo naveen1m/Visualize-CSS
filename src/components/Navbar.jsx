@@ -1,6 +1,13 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useContext, useState } from "react";
+import { Hamburger } from "../utils/Burger";
+import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
+import SidebarContext from "../context/sidebarcontext";
 
 function Navbar() {
+  const {sidebar, setSidebar} = useContext(SidebarContext); 
+  const handleClick = ()=>{
+    setSidebar(!sidebar);
+  }
   return (
     <Fragment>
       <nav className="relative sticky flex w-full flex-wrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
@@ -20,6 +27,9 @@ function Navbar() {
                 loading="lazy"
               />
             </a>
+            <div className="inline-block " onClick={handleClick}>
+            {sidebar?<AiOutlineMenuUnfold size={25}/>:<AiOutlineMenuFold size={25}/>}
+            </div>
           </div>
 
           {/* Center elements */}
