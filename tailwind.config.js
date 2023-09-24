@@ -11,6 +11,7 @@ export default {
   plugins: [
     require("flowbite/plugin"),
     require("./node_modules/tw-elements/dist/plugin.cjs"),
+    require('tailwind-scrollbar'),
   ],
   darkMode: "class",
 };
