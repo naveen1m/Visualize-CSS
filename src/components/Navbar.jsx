@@ -1,7 +1,6 @@
 
 import React, { Fragment, useContext, useState } from "react";
-import { Hamburger } from "../utils/Burger";
-import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
+import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
 import SidebarContext from "../context/sidebarcontext";
 import { Menu } from '@mantine/core';
 import Sidebar from "./sidebar/Sidebar";
@@ -9,31 +8,31 @@ import { Link } from "react-router-dom";
 
 
 function Navbar() {
-  const {sidebar, setSidebar} = useContext(SidebarContext); 
-  const handleClick = ()=>{
+  const { sidebar, setSidebar } = useContext(SidebarContext);
+  const handleClick = () => {
     setSidebar(!sidebar);
   }
   return (
     <Fragment>
-      <nav className="relative sticky z-50 flex w-full flex-wrap items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
+      <nav className="relative sticky h-11 flex w-full flex-row items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           {/* Left elements */}
           <div className="flex">
             {/* Brand */}
             <a
-              className="mx-2 my-1 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
+              className="mx-2 my-5 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 lg:mb-0 lg:mt-0"
               href="/"
             >
               <img
-                className="mr-2"
+                className="mr-2 bg-black rounded-full overflow-hidden object-cover w-full h-8"
                 src="https://tecdn.b-cdn.net/img/logo/te-transparent-noshadows.webp"
-                style={{ height: 20 }}
+                // style={{ height: 50 }}
                 alt="TE Logo"
                 loading="lazy"
               />
             </a>
-            <div className="inline-block " onClick={handleClick}>
-            {sidebar?<AiOutlineMenuUnfold size={25}/>:<AiOutlineMenuFold size={25}/>}
+            <div className="p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
+              {sidebar ? <AiOutlineMenuUnfold size={25} /> : <AiOutlineMenuFold size={25} />}
             </div>
           </div>
 
