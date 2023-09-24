@@ -1,58 +1,86 @@
 export const navigationData = [
     {
+        label: 'Get started',
+        link: '/getstarted'
+    },
+    {
+        label: 'CSS Selector'
+    },
+    {
         label: 'Display',
+        // children: [
+        //     { label: 'First child link', link: '/first' },
+        //     { label: 'Second child Link' },
+        //     {
+        //         label: 'Nested child link',
+        //         children: [
+        //             { label: 'Nested child 1' },
+        //             { label: 'Nested child 2' },
+        //         ],
+        //     },
+        // ],
+    },
+    {
+        label: 'Fonts',
         children: [
-            { label: 'First child link', link: '/first' },
-            { label: 'Second child Link' },
-            {
-                label: 'Nested child link',
-                children: [
-                    { label: 'Nested child 1' },
-                    { label: 'Nested child 2' },
-                ],
-            },
+            { label: 'Font families' },
+            { label: 'Font Size' },
+            { label: 'Font style' },
+            { label: 'Text decoration' }
         ],
     },
     {
-        label: 'Width and Height',
+        label: 'Colors',
         children: [
-            { label: 'Second 1' },
-            { label: 'Second 2' },
-        ],
-    },
-    {
-        label: 'Margin and Padding',
-        link: '/margin_padding'
+            { label: 'color values' },
+        ]
 
     },
     {
-        label: "Border",
-        link: '/border'
+        label: "Background",
+        children: [
+            { label: 'Background image' },
+            { label: 'Background positioning' },
+            { label: 'Background repeat and size' },
+            { label: 'Background shorthand' },
+        ]
     }
     ,
     {
-        label: "Floats"
+        label: "Images",
+        children: [
+            { label: 'Image Positioning' },
+            { label: 'Image Size' },
+            { label: 'Image Borders' },
+        ]
     }
     ,
     {
-        label: "Colors"
+        label: "Width and Height"
     }
     ,
     {
-        label: "Background"
+        label: "Box Model",
+        children: [
+            { label: 'Content' },
+            { label: 'Padding' },
+            { label: 'Border' },
+            { label: 'Margin' },
+        ]
     }
     ,
-    {
-        label: "Font"
-    },
-    {
-        label: "Box Model"
-    },
     {
         label: "Positioning"
     },
     {
-        label: "Flex Box"
+        label: "Float",
+        children: [
+            { label: 'Float property' },
+            { label: 'Clear property' },
+        ]
+    },
+    {
+        label: "Flex box"
     },
     {
         label: "CSS Grid"

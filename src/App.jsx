@@ -3,7 +3,6 @@ import { MantineProvider } from '@mantine/core';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import GetStartedPage from './pages/GetStartedPage';
-import { Hamburger } from './utils/Burger';
 import Navbar from './components/Navbar';
 import {SidebarProvider} from "./context/sidebarcontext.jsx"
 
@@ -18,12 +17,12 @@ function App() {
     >
       <SidebarProvider>
       <Router>
-        <Navbar/>
-        {/* <Hamburger /> */}
+        <Navbar />
+
         <Routes>
 
-          {/* <Route path='/' element={<Home />} /> */}
-          <Route path='/' element={<GetStartedPage />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/getstarted' element={<GetStartedPage />} />
 
 
         </Routes>
