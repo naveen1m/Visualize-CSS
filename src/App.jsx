@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import GetStartedPage from './pages/GetStartedPage';
 import Navbar from './components/Navbar';
 import {SidebarProvider} from "./context/sidebarcontext.jsx"
+import { GetStartedProvider } from './context/getstartedcontext';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         headings: { fontFamily: 'Greycliff CF, sans-serif' }
       }}
     >
+      <GetStartedProvider>
       <SidebarProvider>
       <Router>
         <Navbar />
@@ -28,6 +30,7 @@ function App() {
         </Routes>
       </Router>
       </SidebarProvider>
+      </GetStartedProvider>
     </MantineProvider>
 
   )
