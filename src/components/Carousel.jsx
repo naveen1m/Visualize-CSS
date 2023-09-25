@@ -3,15 +3,15 @@ import { Carousel } from 'flowbite-react';
 
 export default function Carousel_slide() {
   return (
-    <div className='border-2 -z-10  h-[80%] mt-4 mx-8 '    >
+    <div className=' border-2 -z-10 h-[80%] mt-4 mx-8 '    >
       <Carousel
         leftControl=""
         rightControl=""
       >
-        <div className="flex h-full z-0 items-center justify-center bg-[url('https://shorturl.at/oqFPU')] dark:bg-gray-700 text-white text-3xl">
+        <section className="flex h-full z-0 items-center justify-center bg-[url('https://shorturl.at/oqFPU')] dark:bg-gray-700 text-white text-3xl">
           Welcome to  VisualizeCss!!
           Let's Visualize css
-        </div>
+        </section>
 
 
         <img
