@@ -1,7 +1,7 @@
 
 import React, { Fragment, useContext, useState } from "react";
 
-import {AiOutlineMenuFold, AiOutlineMenuUnfold} from 'react-icons/ai'
+import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
 
 
 
@@ -14,14 +14,14 @@ import GetStartedContext from "../context/getstartedcontext";
 
 function Navbar() {
 
-  const {sidebar, setSidebar} = useContext(SidebarContext); 
-  const {getstart} = useContext(GetStartedContext);
-  const handleClick = ()=>{
+  const { sidebar, setSidebar } = useContext(SidebarContext);
+  const { getstart } = useContext(GetStartedContext);
+  const handleClick = () => {
     setSidebar(!sidebar);
   }
   return (
     <Fragment>
-      <nav className="relative sticky h-11 flex w-full flex-row items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
+      <nav className="relative h-11 flex w-full flex-row items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           {/* Left elements */}
           <div className="flex">
@@ -38,8 +38,8 @@ function Navbar() {
                 loading="lazy"
               />
             </a>
-            <div className="inline-block p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer " onClick={handleClick}>
-            {getstart?sidebar?<AiOutlineMenuUnfold size={25}/>:<AiOutlineMenuFold size={25}/>:""}
+            <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
+              {getstart ? sidebar ? <AiOutlineMenuUnfold size={25} /> : <AiOutlineMenuFold size={25} /> : ""}
             </div>
           </div>
 
@@ -47,36 +47,35 @@ function Navbar() {
           {/* Right elements */}
 
           <ul
-            className="list-style-none ml-auto flex flex-row pl-0 md:pl-4"
+            className="list-style-none ml-auto z-50 flex flex-row pl-0 md:pl-4"
             data-te-navbar-nav-ref
           >
-            <li className="flex items-center ">
-              {getstart?"":
-              <Menu trigger="hover" openDelay={100} closeDelay={400} offset={5} withArrow arrowPosition="center" arrowRadius={0} arrowSize={10} shadow="md" loop={true}
-              transitionProps={{ transition: 'SLIDE-DOWN', duration: 150 }}
-            >
-              <Menu.Target>
-                <Link to='/getstarted'>
-                  <button
-                    type="button"
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
-                    // className="mr-3 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] motion-reduce:transition-none dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                    className="mr-3 min-w-fit inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-primary-600    motion-reduce:transition-none hover: "
+            <li className="flex items-center  ">
+              {getstart ? "" :
+                <Menu trigger="hover" openDelay={100} closeDelay={400} offset={5} withArrow arrowPosition="center" arrowRadius={0} arrowSize={10} shadow="md" loop={true}
 
-                  >
-                    Get Started &#9660;
-                  </button>
-                </Link>
-              </Menu.Target>
+                >
+                  <Menu.Target>
+                    <Link to='/getstarted'>
+                      <button
+                        type="button"
+                        data-te-ripple-init
+                        data-te-ripple-color="light"
+                        className="mr-3 min-w-fit   rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-primary-600    motion-reduce:transition-none hover:z-50 relative "
 
-              <Menu.Dropdown >
+                      >
+                        Get Started &#9660;
+                      </button>
+                    </Link>
+                  </Menu.Target>
 
-                <Sidebar />
+                  <Menu.Dropdown className="z-50" >
+
+                    <Sidebar />
 
 
-              </Menu.Dropdown>
-            </Menu>
+                  </Menu.Dropdown>
+                </Menu>
 
               }
               <button
@@ -84,7 +83,7 @@ function Navbar() {
                 data-te-ripple-init
                 data-te-ripple-color="light"
                 className="mr-3 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-primary-600   motion-reduce:transition-none "
-                onClick={() => console.log('clicked about')}
+
               >
                 About
               </button>

@@ -4,10 +4,12 @@ export const navigationData = [
         link: '/getstarted'
     },
     {
-        label: 'CSS Selector'
+        label: 'CSS Selector',
+        link: '/selector'
     },
     {
         label: 'Display',
+        link: '/display'
         // children: [
         //     { label: 'First child link', link: '/first' },
         //     { label: 'Second child Link' },

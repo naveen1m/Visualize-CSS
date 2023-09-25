@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { MantineProvider } from '@mantine/core';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import GetStartedPage from './pages/GetStartedPage';
-import Navbar from './components/Navbar';
-import {SidebarProvider} from "./context/sidebarcontext.jsx"
+import { Navbar } from './components';
+import { SidebarProvider } from "./context/sidebarcontext.jsx"
 import { GetStartedProvider } from './context/getstartedcontext';
+import { Home, GetStartedPage } from './pages'
+import { CssSelector, Display } from './pages/contents';
 
 
 function App() {
+
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS
       theme={{
@@ -17,19 +18,20 @@ function App() {
       }}
     >
       <GetStartedProvider>
-      <SidebarProvider>
-      <Router>
-        <Navbar />
+        <SidebarProvider>
+          <Router>
+            <Navbar />
 
-        <Routes>
+            <Routes>
 
-          <Route path='/' element={<Home />} />
-          <Route path='/getstarted' element={<GetStartedPage />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/getstarted' element={<GetStartedPage />} />
+              <Route path='/selector' element={<CssSelector />} />
+              <Route path='/display' element={<Display />} />
 
-
-        </Routes>
-      </Router>
-      </SidebarProvider>
+            </Routes>
+          </Router>
+        </SidebarProvider>
       </GetStartedProvider>
     </MantineProvider>
 
