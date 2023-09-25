@@ -1,6 +1,7 @@
 import React, { Fragment, useContext } from 'react'
 import Sidebar from '../components/sidebar/Sidebar'
 import SidebarContext from '../context/sidebarcontext'
+
 function GetStartedPage() {
     const { sidebar } = useContext(SidebarContext);
     return (
