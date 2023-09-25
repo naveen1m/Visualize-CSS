@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import GetStartedPage from './pages/GetStartedPage';
 import Navbar from './components/Navbar';
-import {SidebarProvider} from "./context/sidebarcontext.jsx"
+import { SidebarProvider } from "./context/sidebarcontext.jsx"
 import { GetStartedProvider } from './context/getstartedcontext';
 
 
@@ -17,19 +17,20 @@ function App() {
       }}
     >
       <GetStartedProvider>
-      <SidebarProvider>
-      <Router>
-        <Navbar />
+        <SidebarProvider>
+          <Router>
+            <Navbar />
 
-        <Routes>
+            <Routes>
 
-          <Route path='/' element={<Home />} />
-          <Route path='/getstarted' element={<GetStartedPage />} />
+              <Route path='/' element={<Home />} />
+              <Route path='/getstarted' element={<GetStartedPage />} />
 
 
-        </Routes>
-      </Router>
-      </SidebarProvider>
+            </Routes>
+
+          </Router>
+        </SidebarProvider>
       </GetStartedProvider>
     </MantineProvider>
 
