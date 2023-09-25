@@ -1,16 +1,7 @@
-import React, { Fragment, useContext, useEffect } from 'react'
+import React, { Fragment } from 'react'
 import Carousel_slide from '../components/Carousel'
-import GetStartedContext from '../context/getstartedcontext';
 
 function Home() {
-  const { setGetstart } = useContext(GetStartedContext);
-  useEffect(() => {
-    setGetstart(false);
-
-    return () => {
-      setGetstart(true);
-    }
-  }, [])
 
   return (
     <Fragment>

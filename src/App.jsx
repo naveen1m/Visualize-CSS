@@ -1,14 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { MantineProvider } from '@mantine/core';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import GetStartedPage from './pages/GetStartedPage';
 import Navbar from './components/Navbar';
-import { SidebarProvider } from "./context/sidebarcontext.jsx"
-import { GetStartedProvider } from './context/getstartedcontext';
+import SidebarContext from "./context/sidebarcontext.jsx"
+import Sidebar from './components/sidebar/Sidebar';
 
 
 function App() {
+  const { sidebar } = useContext(SidebarContext);
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS
       theme={{
@@ -16,10 +17,12 @@ function App() {
         headings: { fontFamily: 'Greycliff CF, sans-serif' }
       }}
     >
-      <GetStartedProvider>
-        <SidebarProvider>
           <Router>
             <Navbar />
+            <div className='flex flex-row max-w-full'>
+                <section>
+                    {sidebar ? <Sidebar /> : ""}
+                </section>
 
             <Routes>
 
@@ -29,9 +32,9 @@ function App() {
 
             </Routes>
 
+            </div>
+
           </Router>
-        </SidebarProvider>
-      </GetStartedProvider>
     </MantineProvider>
 
   )
