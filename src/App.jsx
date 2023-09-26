@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import GetStartedPage from './pages/GetStartedPage';
 import Navbar from './components/Navbar';
-import SidebarContext from "./context/sidebarcontext.jsx"
+import SidebarContext, { SidebarProvider } from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar';
 
 
 function App() {
-  const { sidebar } = useContext(SidebarContext);
+  const [sidebar, setSidebar] = useContext(SidebarContext);
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS
       theme={{
@@ -20,17 +20,19 @@ function App() {
           <Router>
             <Navbar />
             <div className='flex flex-row max-w-full'>
-                <section>
+                <section className='content'>
                     {sidebar ? <Sidebar /> : ""}
                 </section>
 
-            <Routes>
+                <section className='content' style={{width: "2000px"}}>
+                <Routes>
 
-              <Route path='/' element={<Home />} />
-              <Route path='/getstarted' element={<GetStartedPage />} />
+                  <Route path='/' element={<Home />} />
+                  <Route path='/getstarted' element={<GetStartedPage />} />
 
 
-            </Routes>
+                </Routes>
+                </section>
 
             </div>
 
@@ -40,4 +42,11 @@ function App() {
   )
 }
 
-export default App
+export default function AppWrapper() {
+  return (
+    <SidebarProvider>
+      <App />
+    </SidebarProvider>
+  );
+}
+// export default App 

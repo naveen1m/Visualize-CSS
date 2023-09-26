@@ -13,7 +13,7 @@ import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
 
-  const { sidebar, setSidebar } = useContext(SidebarContext);
+  const [ sidebar, setSidebar ] = useContext(SidebarContext);
   const handleClick = () => {
     setSidebar(!sidebar);
   }
