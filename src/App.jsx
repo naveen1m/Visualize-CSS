@@ -7,8 +7,12 @@ import { GetStartedProvider } from './context/getstartedcontext';
 import { Home, GetStartedPage, About, ErrorPage } from './pages'
 import { CssSelector, Display } from './pages/contents';
 
+import SidebarContext from "./context/sidebarcontext.jsx"
+import Sidebar from './components/sidebar/Sidebar.jsx';
+
 
 function App() {
+  const [sidebar, setSidebar] = useContext(SidebarContext);
 
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS
@@ -17,27 +21,37 @@ function App() {
         headings: { fontFamily: 'Greycliff CF, sans-serif' }
       }}
     >
-      <GetStartedProvider>
-        <SidebarProvider>
           <Router>
             <Navbar />
+            <div className='flex flex-row max-w-full'>
+                <section className='content'>
+                    {sidebar ? <Sidebar /> : ""}
+                </section>
 
-            <Routes>
-
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
+                <section className='content' style={{width: "10000px"}}>
+                <Routes>
+                  <Route path='/' element={<Home />} />
+                  <Route path='/about' element={<About />} />
               <Route path='/getstarted' element={<GetStartedPage />} />
               <Route path='/selector' element={<CssSelector />} />
               <Route path='/display' element={<Display />} />
 
               <Route path='*' element={<ErrorPage />} />
-            </Routes>
+                </Routes>
+                </section>
+
+            </div>
+
           </Router>
-        </SidebarProvider>
-      </GetStartedProvider>
     </MantineProvider>
 
   )
 }
 
-export default App
+export default function AppWrapper() {
+  return (
+    <SidebarProvider>
+      <App />
+    </SidebarProvider>
+  );
+}
