@@ -8,17 +8,16 @@ import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
 import SidebarContext from "../context/sidebarcontext";
 import { Menu } from '@mantine/core';
 import Sidebar from "./sidebar/Sidebar";
-import { Link } from "react-router-dom";
-import GetStartedContext from "../context/getstartedcontext";
+import { Link, useLocation } from "react-router-dom";
 
 
 function Navbar() {
 
-  const { sidebar, setSidebar } = useContext(SidebarContext);
-  const { getstart } = useContext(GetStartedContext);
+  const [ sidebar, setSidebar ] = useContext(SidebarContext);
   const handleClick = () => {
     setSidebar(!sidebar);
   }
+  const location = useLocation();
   return (
     <Fragment>
       <nav className="relative h-11 flex w-full flex-row items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
@@ -39,7 +38,7 @@ function Navbar() {
               />
             </a>
             <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
-              {getstart ? sidebar ? <AiOutlineMenuUnfold size={25} /> : <AiOutlineMenuFold size={25} /> : ""}
+              {location.pathname!="/" ? sidebar ? <AiOutlineMenuUnfold size={25} /> : <AiOutlineMenuFold size={25} /> : ""}
             </div>
           </div>
 
@@ -51,7 +50,7 @@ function Navbar() {
             data-te-navbar-nav-ref
           >
             <li className="flex items-center  ">
-              {getstart ? "" :
+              {location.pathname!="/" ? "" :
                 <Menu trigger="hover" openDelay={100} closeDelay={400} offset={5} withArrow arrowPosition="center" arrowRadius={0} arrowSize={10} shadow="md" loop={true}
 
                 >
