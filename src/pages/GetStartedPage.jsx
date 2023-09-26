@@ -3,13 +3,9 @@ import Sidebar from '../components/sidebar/Sidebar'
 import SidebarContext from '../context/sidebarcontext'
 
 function GetStartedPage() {
-    const { sidebar } = useContext(SidebarContext);
+  const [sidebar, setSidebar] = useContext(SidebarContext);
     return (
         <Fragment>
-            <div className='flex flex-row max-w-full'>
-                <section>
-                    {sidebar ? <Sidebar /> : ""}
-                </section>
 
                 <section className={`content ml-2 ${sidebar ? " ml-4" : ""}`}>
                     <h1 className={`text-3xl font-bold ${sidebar ? "text-violet-400" : ""}`}>Get start with the VisualizeCSS!</h1>
@@ -23,7 +19,7 @@ function GetStartedPage() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolores obcaecati excepturi, illum distinctio voluptates, culpa dolorum assumenda aspernatur ab iusto dignissimos nulla provident vitae, quia corporis! Aperiam, saepe alias.
                     </p>
                 </section>
-            </div>
+
         </Fragment>
     )
 }
