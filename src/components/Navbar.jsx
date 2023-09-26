@@ -37,9 +37,14 @@ function Navbar() {
                 loading="lazy"
               />
             </a>
-            <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
-              {location.pathname!="/" ? sidebar ? <AiOutlineMenuUnfold size={25} /> : <AiOutlineMenuFold size={25} /> : ""}
-            </div>
+            {location.pathname!="/" ? sidebar ? 
+              <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
+                <AiOutlineMenuUnfold size={25} /> 
+              </div>
+              : 
+              <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
+                <AiOutlineMenuFold size={25} />
+            </div> : ""}
           </div>
 
           {/* Center elements */}
