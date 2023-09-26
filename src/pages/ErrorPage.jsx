@@ -8,7 +8,7 @@ function ErrorPage() {
         <div className="relative h-screen bg-stone-400">
             {/* Illustration as the background */}
             <Illustration
-                className="absolute inset-0 w-full  h-full object-cover opacity-10 text-green-300 dark:text-green-700"
+                className="absolute inset-0 w-full  h-full object-cover opacity-10"
                 style={{ zIndex: -1 }}
             />
 
