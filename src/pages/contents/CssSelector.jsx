@@ -1,15 +1,9 @@
-import React, { useContext } from 'react'
-import SidebarContext from '../../context/sidebarcontext'
-import Sidebar from '../../components/sidebar/Sidebar';
+import React from 'react'
 
 function CssSelector() {
-    const { sidebar } = useContext(SidebarContext);
     return (
-        <div className='flex flex-row max-w-full'>
-
-            <section>
-                {sidebar ? <Sidebar /> : ""}
-            </section>
+        <div className='flex flex-row'>
+        
             <section className='flex-col'>
 
 
