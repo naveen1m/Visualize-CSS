@@ -1,15 +1,9 @@
-
 import React, { Fragment, useContext, useState } from "react";
-
 import { AiOutlineMenuFold, AiOutlineMenuUnfold } from 'react-icons/ai'
-
-
-
 import SidebarContext from "../context/sidebarcontext";
 import { Menu } from '@mantine/core';
 import Sidebar from "./sidebar/Sidebar";
 import { Link, useLocation } from "react-router-dom";
-
 
 function Navbar() {
 
@@ -82,16 +76,17 @@ function Navbar() {
                 </Menu>
 
               }
-              <button
-                type="button"
-                data-te-ripple-init
-                data-te-ripple-color="light"
-                className="mr-3 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-primary-600   motion-reduce:transition-none "
+              <Link to='/about'>
+                <button
+                  type="button"
+                  data-te-ripple-init
+                  data-te-ripple-color="light"
+                  className="mr-3 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white hover:bg-primary-600   motion-reduce:transition-none "
 
-              >
-                About
-              </button>
-
+                >
+                  About
+                </button>
+              </Link>
             </li>
 
 

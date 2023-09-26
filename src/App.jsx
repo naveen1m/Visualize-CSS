@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { MantineProvider } from '@mantine/core';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { BrowserRouter as Router, Routes, Route, useRoutes } from 'react-router-dom';
 import { Navbar } from './components';
 import { SidebarProvider } from "./context/sidebarcontext.jsx"
-import { Home, GetStartedPage } from './pages'
+import { GetStartedProvider } from './context/getstartedcontext';
+import { Home, GetStartedPage, About, ErrorPage } from './pages'
 import { CssSelector, Display } from './pages/contents';
 
 import SidebarContext from "./context/sidebarcontext.jsx"
@@ -31,14 +31,16 @@ function App() {
                 <section className='content' style={{width: "10000px"}}>
                 <Routes>
                   <Route path='/' element={<Home />} />
-                  <Route path='/getstarted' element={<GetStartedPage />} />
-                  <Route path='/selector' element={<CssSelector />} />
-                  <Route path='/display' element={<Display />} />
+                  <Route path='/about' element={<About />} />
+              <Route path='/getstarted' element={<GetStartedPage />} />
+              <Route path='/selector' element={<CssSelector />} />
+              <Route path='/display' element={<Display />} />
+
+              <Route path='*' element={<ErrorPage />} />
                 </Routes>
                 </section>
 
             </div>
-
 
           </Router>
     </MantineProvider>
