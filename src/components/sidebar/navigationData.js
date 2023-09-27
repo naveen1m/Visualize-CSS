@@ -24,8 +24,10 @@ export const navigationData = [
     },
     {
         label: 'Fonts',
+        link: '/fonts',
         children: [
-            { label: 'Font families' },
+            { label: 'Font families',
+        link: '/fonts/#fontfamilies' },
             { label: 'Font Size' },
             { label: 'Font style' },
             { label: 'Text decoration' }

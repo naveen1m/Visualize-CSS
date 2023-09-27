@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, useRoutes } from 'react-router-
 import { Navbar } from './components';
 import { SidebarProvider } from "./context/sidebarcontext.jsx"
 import { Home, GetStartedPage, About, ErrorPage } from './pages'
-import { CssSelector, Display } from './pages/contents';
+import { CssSelector, Display, Fonts } from './pages/contents';
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
@@ -34,6 +34,7 @@ function App() {
               <Route path='/getstarted' element={<GetStartedPage />} />
               <Route path='/selector' element={<CssSelector />} />
               <Route path='/display' element={<Display />} />
+              <Route path='/fonts' element={<Fonts />} />
 
               <Route path='*' element={<ErrorPage />} />
             </Routes>
