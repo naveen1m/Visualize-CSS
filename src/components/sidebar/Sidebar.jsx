@@ -1,15 +1,17 @@
 import React, { Fragment, useState } from 'react';
 import { NavLink } from '@mantine/core';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { navigationData } from './navigationData';
 import { useLocation } from 'react-router-dom';
 
 function Sidebar() {
     const [activeLabel, setActiveLabel] = useState(null);
     const location = useLocation();
+    const navigate = useNavigate();
 
-    const handleNavLinkClick = (label) => {
-        setActiveLabel(label);
+    const handleNavLinkClick = (data) => {
+        setActiveLabel(data.label);
+        navigate(data.link)
 
     };
     const renderNavLink = (data) => (
@@ -19,7 +21,7 @@ function Sidebar() {
             component={data.link ? Link : undefined}
             to={data.link}
             childrenOffset={data.childrenOffset || 8}
-            onClick={() => handleNavLinkClick(data.label)}
+            onClick={() => handleNavLinkClick(data)}
         >
             {data.children &&
                 data.children.map((child, index) =>
