@@ -31,8 +31,8 @@ function Sidebar() {
     return (
         <Fragment>
 
-            <div className='left-0 relative z-50 overflow-hidden  h-[calc(100vh-4rem)]  bg-stone-100 w-44 min-w-fit
-            overflow-y-scroll scroll-smooth scrollbar-track-current  scrollbar-thumb-rounded'>
+            <div className='left-0 relative z-50 overflow-hidden  h-[calc(100vh-4rem)]  bg-stone-100 w-52 min-w-fit
+            overflow-y-scroll scroll-smooth scrollbar-track-current  scrollbar-thumb-rounded '>
                 {navigationData.map((item, index) => (
                     <div key={index}
                         className='text-2xl '

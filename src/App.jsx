@@ -28,7 +28,7 @@ function App() {
                     {sidebar ? <Sidebar /> : ""}
                 </section>
 
-                <section className='content' style={{width: "10000px"}}>
+                <section className='content' style={{width: "100%"}}>
                 <Routes>
                   <Route path='/' element={<Home />} />
                   <Route path='/getstarted' element={<GetStartedPage />} />
