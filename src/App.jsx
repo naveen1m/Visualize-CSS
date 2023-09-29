@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { MantineProvider } from '@mantine/core';
-import { BrowserRouter as Router, Routes, Route, useRoutes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { Navbar } from './components';
 import { SidebarProvider } from "./context/sidebarcontext.jsx"
 import { Home, GetStartedPage, About, ErrorPage } from './pages'
-import { CssSelector, Display, Fonts } from './pages/contents';
+import { CssSelector, Display, Fonts, Colors } from './pages/contents';
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
@@ -26,7 +27,6 @@ function App() {
           <section className='content'>
             {sidebar ? <Sidebar /> : ""}
           </section>
-
           <section className='content' style={{ width: "10000px" }}>
             <Routes>
               <Route path='/' element={<Home />} />
@@ -35,6 +35,8 @@ function App() {
               <Route path='/selector' element={<CssSelector />} />
               <Route path='/display' element={<Display />} />
               <Route path='/fonts' element={<Fonts />} />
+              <Route path='/colors' element={<Colors />} />
+
 
               <Route path='*' element={<ErrorPage />} />
             </Routes>
