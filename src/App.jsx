@@ -36,6 +36,7 @@ function App() {
               <Route path='/display' element={<Display />} />
               <Route path='/fonts' element={<Fonts />} />
 
+
               <Route path='*' element={<ErrorPage />} />
             </Routes>
           </section>
