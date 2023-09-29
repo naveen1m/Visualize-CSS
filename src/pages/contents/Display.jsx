@@ -31,10 +31,10 @@ function Display() {
                             This is an amazing attribute isn't it?
                         </div>
                     </section>
-                    <section  className='  p-3 py-5 rounded-md w-full'>
+                    <section  className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
                         <div className='text-center text-xl'>Code and Insights</div>
                         
-                        <code className='inline-block w-4/5 t   '>
+                        <code className='inline-block w-4/5   '>
                             &lt;div&gt;
                                 Hello, this is visualize css. 
                                 Today, lets learn about display attribute of css.
