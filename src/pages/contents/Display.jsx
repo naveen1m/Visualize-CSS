@@ -23,13 +23,20 @@ function Display() {
                     </div>
                 </section>
                 <section className="content w-2/3 m-5 rounded-lg font-sans">
-                    <section className='flex justify-center bg-amber-200 p-3 py-5 rounded-md w-full'>
-                        <div className='inline-block bg-orange-400 rounded-sm md:w-4/5'>
-                            Hello, this is visualize css. 
-                            Today, lets learn about display attribute of css.
-                            <div className='bg-orange-300'style={{display: displayData[activeLabel].property}}>Test element.</div> 
-                            This is an amazing attribute isn't it?
-                        </div>
+                    <section className=' minHeight-72 bg-indigo-950 p-3 py-5 rounded-md w-full  text-white font-medium'>
+                        
+                            {displayData[activeLabel].property==="flex"?<div className='text-center'>Flex Container</div>:''}
+                            <div  className={displayData[activeLabel].property==="flex"?'flex':''}>
+                                <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium" style={{display: displayData[activeLabel].property==="flex"?"":displayData[activeLabel].property}}>
+                                    <div className={displayData[activeLabel].property==="inline"?'inline':'flex items-center justify-center w-28 m-1 h-28 '}><div className={displayData[activeLabel].property==="inline"?'inline':''}>{displayData[activeLabel].property==="flex"?'Flex Item':'Box'}</div></div>
+                                </div>
+                                <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium" style={{display: displayData[activeLabel].property==="flex"?"":displayData[activeLabel].property}}>
+                                    <div className={displayData[activeLabel].property==="inline"?'inline':'flex items-center justify-center w-28 m-1 h-28 '}><div className={displayData[activeLabel].property==="inline"?'inline':''}>{displayData[activeLabel].property==="flex"?'Flex Item':'Box'}</div></div>
+                                </div>
+                            </div>
+                            
+                            
+                            
                     </section>
                     <section  className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
                         <div className='text-center text-xl'>Code and Insights</div>
@@ -50,14 +57,6 @@ function Display() {
                 </section>
             </div>
 
-            {/* <section className='flex flex-row justify-start items-start '>
- 
-                <section className='flex-col'>
-
-                    <p className='bg-green-300 text-center text-3xl'>Learn how to display a objects using css </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, omnis suscipit aliquid deserunt tenetur debitis voluptatem sint, voluptatibus, deleniti repudiandae vel eveniet neque nihil sunt? Ipsa animi hic asperiores. Saepe.</p>
-                </section>
-            </section> */}
         </Fragment>
     )
 }

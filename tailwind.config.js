@@ -7,11 +7,14 @@ export default {
   ],
   theme: {
     extend: {},
+    minHeight: {
+      72: "400px",
+    },
   },
   plugins: [
     require("flowbite/plugin"),
     require("./node_modules/tw-elements/dist/plugin.cjs"),
-    require('tailwind-scrollbar'),
+    require("tailwind-scrollbar"),
   ],
   darkMode: "class",
 };
