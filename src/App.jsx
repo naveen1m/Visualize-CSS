@@ -38,6 +38,7 @@ function App() {
               <Route path='/colors' element={<Colors />} />
 
 
+
               <Route path='*' element={<ErrorPage />} />
             </Routes>
           </section>
