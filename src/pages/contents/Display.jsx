@@ -1,11 +1,12 @@
 import React, { Fragment, useState } from 'react'
-import { displayData } from './data/displayData'
-import "./css/displayStyle.css"
+import { displayData } from '../../components/display/displayData'
+import "../../components/display/displayStyle.css"
 function Display() {
     const [activeLabel, setActiveLabel] = useState(0);
     const handleComponentClick = (index) => {
         setActiveLabel(index);
     };
+    const listItems = displayData[activeLabel].whenNotApplied.map((d) => <li >{d}</li>);
     return (
         <Fragment>
             <h3 className='text-center text-3xl my-3 font-sans'>Display</h3>
@@ -23,16 +24,67 @@ function Display() {
                     </div>
                 </section>
                 <section className="content w-2/3 m-5 rounded-lg font-sans">
-                    <section className='flex justify-center bg-amber-200 p-3 py-5 rounded-md w-full'>
-                        <div className='inline-block bg-orange-400 rounded-sm md:w-4/5'>
-                            Hello, this is visualize css. 
-                            Today, lets learn about display attribute of css.
-                            <div className='bg-orange-300'style={{display: displayData[activeLabel].property}}>Test element.</div> 
-                            This is an amazing attribute isn't it?
+                    <section className='min-h-1/2 bg-indigo-950 p-3 py-5 rounded-md w-full  text-white font-medium'>
+                        
+{/*                             
+                            {displayData[activeLabel].property==="inline-flex"||displayData[activeLabel].property==="inline-grid"?
+                            <div  style={{display: displayData[activeLabel].containerProperty}}>
+                        
+                            
+                            <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{display: "inline-block"}}>
+                                <div style={{padding: "35%"}}>Box</div>
+                            </div>
+                            
+                            <div className=" m-2 p-1 rounded-md text-white font-medium text-center bg-sky-600" style={{display: displayData[activeLabel].boxProperty, gridTemplateColumns: "auto auto auto"}}>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B1</div>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B2</div>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B2</div>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B2</div>
+                            </div>
+                            
+                            
+                        </div> :
+                        <div  style={{display: displayData[activeLabel].containerProperty , gridTemplateColumns: "auto auto auto"}}>
+                        
+                        <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{display: displayData[activeLabel].boxProperty}}>
+                            <div style={{paddingTop: "35%",paddingBottom: "35%", display: displayData[activeLabel].boxProperty}}>Box</div>
                         </div>
+                        <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{display: displayData[activeLabel].boxProperty}}>
+                            <div style={{paddingTop: "35%",paddingBottom: "35%", display: displayData[activeLabel].boxProperty}}>Box</div>
+                        </div>
+                    </div> } */}
+                            
+                    
+                            <div  style={{display: displayData[activeLabel].containerProperty, gridTemplateColumns: "auto auto auto"}}>
+                        
+                            {/* <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{display: displayData[activeLabel].boxProperty}}>
+                                <div style={{padding: "35%", display: displayData[activeLabel].boxProperty}}>Box</div>
+                            </div> */}
+                            <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{display: displayData[activeLabel].boxProperty, padding: "10px"}}>
+                                Box
+                            </div>
+                        
+                            {/* <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{display: "inline-block"}}>
+                                <div style={{padding: "35%"}}>Box</div>
+                            </div> */}
+                            
+                            <div className=" m-2 p-1 rounded-md text-white font-medium text-center bg-sky-600" style={{display: displayData[activeLabel].boxProperty, gridTemplateColumns: "auto auto auto"}}>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B1</div>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B2</div>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B3</div>
+                                <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B4</div>
+                            </div>
+                            
+                            
+                        </div> 
+                        <div  style={{display: displayData[activeLabel].containerProperty , gridTemplateColumns: "auto auto auto"}}>
+                        
+                        
+                    </div> 
+                            
                     </section>
                     <section  className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
-                        <div className='text-center text-xl'>Code and Insights</div>
+                        <div className='text-center text-2xl'>Code</div>
                         
                         <code className='inline-block w-4/5   '>
                             &lt;div&gt;
@@ -43,21 +95,16 @@ function Display() {
                                 This is an amazing attribute isn't it?
                                 &lt;/div&gt;
                         </code>
-                        <div>
-                            {displayData[activeLabel].insight}
-                        </div>
+                    </section>
+                    <section  className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
+                        <div className='text-center text-2xl'>Insights</div>
+                        <div className='text-md'>{displayData[activeLabel].insight}</div>
+                        <div className=' text-xl'>Where it is not applied?</div>
+                        <ul className='list-disc list-inside'>{listItems}</ul>
                     </section>
                 </section>
             </div>
 
-            {/* <section className='flex flex-row justify-start items-start '>
- 
-                <section className='flex-col'>
-
-                    <p className='bg-green-300 text-center text-3xl'>Learn how to display a objects using css </p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae, omnis suscipit aliquid deserunt tenetur debitis voluptatem sint, voluptatibus, deleniti repudiandae vel eveniet neque nihil sunt? Ipsa animi hic asperiores. Saepe.</p>
-                </section>
-            </section> */}
         </Fragment>
     )
 }
