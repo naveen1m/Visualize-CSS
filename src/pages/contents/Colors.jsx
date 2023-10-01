@@ -1,28 +1,38 @@
 import React, { Fragment } from 'react'
+import { RGBcolor, Hexcolor, RGBAcolor, HSLcolor, HSLAcolor } from '../../components'
 
 function Colors() {
+
+
     return (
         <Fragment>
-            <p className='text-xl mb-6 capitalize bg-violet-400 text-center'>This is color page.</p>
+            <p className='text-xl mb-6 capitalize bg-violet-400 text-center '>This is color page.</p>
 
             <section id="hex">
-                <h1 className='text-start mb-4 text-xl bg-violet-300'>hex triplet color</h1>
+                <h1 className='text-start mb-4 text-xl bg-violet-300 pl-4'>hex triplet color</h1>
+                <Hexcolor />
+
             </section>
 
-            <section id="rgb">
-                <h1 className='text-start mb-4 text-xl bg-violet-300'>RGB color</h1>
+            <section id="rgb" className='mb-6'>
+                <h1 className='text-start mb-4 text-xl bg-violet-300 pl-4 '>RGB color</h1>
+                <RGBcolor />
+
             </section>
 
-            <section id="rgba">
-                <h1 className='text-start mb-4 text-xl bg-violet-300'>RGBA color</h1>
+            <section id="rgba" className='mb-6'>
+                <h1 className='text-start mb-4 text-xl bg-violet-300 pl-4'>RGBA color</h1>
+                <RGBAcolor />
             </section>
 
-            <section id="hsl">
-                <h1 className='text-start mb-4 text-xl bg-violet-300'>HSL color</h1>
+            <section id="hsl" className='mb-6'>
+                <h1 className='text-start mb-4 text-xl bg-violet-300 pl-4'>HSL color</h1>
+                <HSLcolor />
             </section>
 
-            <section id="hsla">
-                <h1 className='text-start mb-4 text-xl bg-violet-300 active:bg-blue-400'>HSLA color</h1>
+            <section id="hsla" className='mb-6'>
+                <h1 className='text-start mb-4 text-xl bg-violet-300 active:bg-blue-400 pl-4'>HSLA color</h1>
+                <HSLAcolor />
             </section>
         </Fragment>
     )
