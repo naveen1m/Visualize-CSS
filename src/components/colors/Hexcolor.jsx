@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Slider } from '@mantine/core';
 import CopyToClipboard from '../CopyToClipboard';
+import DescAnimate from '../DescAnimate';
 
 function Hexcolor() {
     const [red, setRed] = useState(10);
@@ -13,6 +14,8 @@ function Hexcolor() {
     };
 
     const hexColor = `#${toHex(red)}${toHex(green)}${toHex(blue)}`;
+
+    const desc = `A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.`;
 
     return (
         <div className='mb-6'>
@@ -53,6 +56,8 @@ function Hexcolor() {
                     />
                 </div>
             </div>
+
+            <DescAnimate text={desc} />
 
         </div>
     );
