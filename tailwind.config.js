@@ -6,9 +6,10 @@ export default {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
-    minHeight: {
-      72: "400px",
+    extend: {
+      minHeight: {
+        "1/2": "370px",
+      },
     },
   },
   plugins: [
