@@ -10,7 +10,7 @@ function DescAnimate({ desc }) {
 
     return (
         <Fragment>
-            <div className=' bg-[#3a404d] rounded-md text-white '>
+            <div className=' bg-[#3a404d] max-w-2xl min-w-[25rem] min-h-fit overflow-hidden rounded-md text-white '>
                 <p className='text-sm pl-6 font-mono font-normal'>Insights</p>
                 <div className='max-w-2xl min-w-[25rem] min-h-fit bg-blue-950 rounded overflow-hidden text-stone-50 px-4 py-2 '>
                     <p className='text-sm'>
