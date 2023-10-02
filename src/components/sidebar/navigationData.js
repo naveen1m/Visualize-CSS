@@ -26,11 +26,22 @@ export const navigationData = [
         label: 'Fonts',
         link: '/fonts',
         children: [
+
             { label: 'Font families',
-        link: '/fonts/#fontfamilies' },
-            { label: 'Font Size' },
-            { label: 'Font style' },
-            { label: 'Text decoration' }
+             link: '/fonts/fontfamily' },
+
+            { label: 'Font Size',
+        link: 'fonts/fontsize' },  
+        {
+            label: 'Font weight',
+            link: 'fonts/fontweight'
+        },
+
+        { label: 'Font style',
+        link: 'fonts/fontstyle' },
+
+            { label: 'Text decoration',
+            link: 'fonts/textdecoration' },
         ],
     },
     {
