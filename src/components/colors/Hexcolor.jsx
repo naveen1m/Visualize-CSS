@@ -9,7 +9,6 @@ function Hexcolor() {
     const [blue, setBlue] = useState(0);
 
     const toHex = (value) => {
-        console.log(value)
         return value.toString(16).padStart(2, '0');
     };
 
