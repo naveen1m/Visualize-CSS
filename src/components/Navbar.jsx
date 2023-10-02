@@ -7,14 +7,14 @@ import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
 
-  const [ sidebar, setSidebar ] = useContext(SidebarContext);
+  const [sidebar, setSidebar] = useContext(SidebarContext);
   const handleClick = () => {
     setSidebar(!sidebar);
   }
   const location = useLocation();
   return (
     <Fragment>
-      <nav className="relative h-11 flex w-full flex-row items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
+      <nav className="sticky top-0 h-11 z-50 flex w-full flex-row items-center justify-between bg-[#FBFBFB] py-2 text-neutral-500 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 lg:py-4">
         <div className="flex w-full flex-wrap items-center justify-between px-3">
           {/* Left elements */}
           <div className="flex">
@@ -31,14 +31,14 @@ function Navbar() {
                 loading="lazy"
               />
             </a>
-            {location.pathname!="/" ? sidebar ? 
+            {location.pathname != "/" ? sidebar ?
               <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
-                <AiOutlineMenuUnfold size={25} /> 
+                <AiOutlineMenuUnfold size={25} />
               </div>
-              : 
+              :
               <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
                 <AiOutlineMenuFold size={25} />
-            </div> : ""}
+              </div> : ""}
           </div>
 
           {/* Center elements */}
@@ -49,7 +49,7 @@ function Navbar() {
             data-te-navbar-nav-ref
           >
             <li className="flex items-center  ">
-              {location.pathname!="/" ? "" :
+              {location.pathname != "/" ? "" :
                 <Menu trigger="hover" openDelay={100} closeDelay={400} offset={5} withArrow arrowPosition="center" arrowRadius={0} arrowSize={10} shadow="md" loop={true}
 
                 >

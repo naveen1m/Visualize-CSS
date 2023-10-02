@@ -26,7 +26,6 @@ export const navigationData = [
         label: 'Fonts',
         link: '/fonts',
         children: [
-
             { label: 'Font families',
              link: '/fonts/fontfamily' },
 
@@ -42,17 +41,45 @@ export const navigationData = [
 
             { label: 'Text decoration',
             link: 'fonts/textdecoration' },
+            {
+                label: 'Font families',
+                link: '/fonts/#fontfamilies'
+            },
+            { label: 'Font Size' },
+            { label: 'Font style' },
+            { label: 'Text decoration' }
         ],
     },
     {
         label: 'Colors',
+        link: '/colors',
         children: [
-            { label: 'color values' },
+            {
+                label: 'hex triplet',
+                link: '/colors/#hex'
+            },
+            {
+                label: 'rgb() Notation',
+                link: '/colors/#rgb'
+            },
+            {
+                label: 'rgba() Notation',
+                link: '/colors/#rgba'
+            },
+            {
+                label: 'hsl() Notation',
+                link: '/colors/#hsl'
+            },
+            {
+                label: 'hsla() Notation',
+                link: '/colors/hsla'
+            },
         ]
 
     },
     {
         label: "Background",
+        link: '/background',
         children: [
             { label: 'Background image' },
             { label: 'Background positioning' },
@@ -63,6 +90,7 @@ export const navigationData = [
     ,
     {
         label: "Images",
+        link: '/images',
         children: [
             { label: 'Image Positioning' },
             { label: 'Image Size' },
