@@ -14,7 +14,7 @@ function Hexcolor() {
 
     const hexColor = `#${toHex(red)}${toHex(green)}${toHex(blue)}`;
 
-    const desc = `A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.`;
+    const description = `A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color.`;
 
     return (
         <div className='mb-6'>
@@ -56,7 +56,7 @@ function Hexcolor() {
                 </div>
             </div>
 
-            <DescAnimate text={desc} />
+            <DescAnimate desc={description} />
 
         </div>
     );
