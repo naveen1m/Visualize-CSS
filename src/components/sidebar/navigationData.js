@@ -26,21 +26,29 @@ export const navigationData = [
         label: 'Fonts',
         link: '/fonts',
         children: [
-            { label: 'Font families',
-             link: '/fonts/fontfamily' },
+            {
+                label: 'Font families',
+                link: '/fonts/fontfamily'
+            },
 
-            { label: 'Font Size',
-        link: 'fonts/fontsize' },  
-        {
-            label: 'Font weight',
-            link: 'fonts/fontweight'
-        },
+            {
+                label: 'Font Size',
+                link: 'fonts/fontsize'
+            },
+            {
+                label: 'Font weight',
+                link: 'fonts/fontweight'
+            },
 
-        { label: 'Font style',
-        link: 'fonts/fontstyle' },
+            {
+                label: 'Font style',
+                link: 'fonts/fontstyle'
+            },
 
-            { label: 'Text decoration',
-            link: 'fonts/textdecoration' },
+            {
+                label: 'Text decoration',
+                link: 'fonts/textdecoration'
+            },
             {
                 label: 'Font families',
                 link: '/fonts/#fontfamilies'
@@ -72,7 +80,7 @@ export const navigationData = [
             },
             {
                 label: 'hsla() Notation',
-                link: '/colors/hsla'
+                link: '/colors/#hsla'
             },
         ]
 
