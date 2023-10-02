@@ -32,12 +32,12 @@ function Navbar() {
               />
             </a>
             {location.pathname != "/" ? sidebar ?
-              <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
-                <AiOutlineMenuUnfold size={25} />
+              <div className=" px-0 py-0 text-black font-extrabold flex flex-col items-center justify-center rounded cursor-pointer  " onClick={handleClick}>
+                <AiOutlineMenuUnfold size={32} />
               </div>
               :
-              <div className=" p-1 text-black font-extrabold flex flex-col items-center justify-center  hover:bg-blue-200 rounded cursor-pointer  " onClick={handleClick}>
-                <AiOutlineMenuFold size={25} />
+              <div className=" px-0 py-0 text-black font-extrabold flex flex-col items-center justify-center rounded cursor-pointer  " onClick={handleClick}>
+                <AiOutlineMenuFold size={32} />
               </div> : ""}
           </div>
 

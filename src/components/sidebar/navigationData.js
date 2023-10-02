@@ -28,6 +28,29 @@ export const navigationData = [
         children: [
             {
                 label: 'Font families',
+                link: '/fonts/fontfamily'
+            },
+
+            {
+                label: 'Font Size',
+                link: 'fonts/fontsize'
+            },
+            {
+                label: 'Font weight',
+                link: 'fonts/fontweight'
+            },
+
+            {
+                label: 'Font style',
+                link: 'fonts/fontstyle'
+            },
+
+            {
+                label: 'Text decoration',
+                link: 'fonts/textdecoration'
+            },
+            {
+                label: 'Font families',
                 link: '/fonts/#fontfamilies'
             },
             { label: 'Font Size' },
@@ -57,7 +80,7 @@ export const navigationData = [
             },
             {
                 label: 'hsla() Notation',
-                link: '/colors/hsla'
+                link: '/colors/#hsla'
             },
         ]
 

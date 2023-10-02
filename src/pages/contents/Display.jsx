@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import { displayData } from '../../components/display/displayData'
+import { displayData } from '../../data'
 import "../../components/display/displayStyle.css"
 function Display() {
     const [activeLabel, setActiveLabel] = useState(0);
@@ -16,7 +16,7 @@ function Display() {
                     <div className='cont max-h-[60vh] overflow-y-scroll scroll-smooth scrollbar-track-current  scrollbar-thumb-rounded'>
                         {displayData.map((e, index) => (
                             <div key={index}
-                                className= {activeLabel===index?'text-md py-2 rounded-lg m-2 bg-sky-900 ':'text-md py-2 rounded-lg m-2 hover:bg-sky-950 '}    
+                                className={activeLabel === index ? 'text-md py-2 rounded-lg m-2 bg-sky-900 ' : 'text-md py-2 rounded-lg m-2 hover:bg-sky-950 '}
                                 onClick={() => handleComponentClick(index)}
                             >{e.data}</div>
                         ))}
@@ -24,31 +24,31 @@ function Display() {
                 </section>
                 <section className="content w-2/3 m-5 rounded-lg font-sans">
                     <section className='min-h-1/2 bg-indigo-950 p-3 py-5 rounded-md w-full  text-white font-medium'>
-                        <div  style={{display: displayData[activeLabel].containerProperty, gridTemplateColumns: "auto auto auto"}}>
-                            <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{display: displayData[activeLabel].boxProperty, padding: "10px"}}>
+                        <div style={{ display: displayData[activeLabel].containerProperty, gridTemplateColumns: "auto auto auto" }}>
+                            <div className="w-28 m-2 h-28 bg-sky-600 rounded-md text-white font-medium text-center" style={{ display: displayData[activeLabel].boxProperty, padding: "10px" }}>
                                 Box
                             </div>
-                            <div className=" m-2 p-1 rounded-md text-white font-medium text-center bg-sky-600" style={{display: displayData[activeLabel].boxProperty, gridTemplateColumns: "auto auto auto"}}>
+                            <div className=" m-2 p-1 rounded-md text-white font-medium text-center bg-sky-600" style={{ display: displayData[activeLabel].boxProperty, gridTemplateColumns: "auto auto auto" }}>
                                 <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B1</div>
                                 <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B2</div>
                                 <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B3</div>
                                 <div className=' m-1 rounded-md p-2 text-center bg-cyan-500'>B4</div>
                             </div>
-                        </div> 
+                        </div>
                     </section>
-                    <section  className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
+                    <section className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
                         <div className='text-center text-2xl'>Code</div>
                         <code className='inline-block w-4/5   '>
                             &lt;div&gt;
-                                Hello, this is visualize css. 
-                                Today, lets learn about display attribute of css.
-                                &lt;div style=&#123;display: "{displayData[activeLabel].property}"&#125;
-                                &gt;Test element.&lt;/div&gt; 
-                                This is an amazing attribute isn't it?
-                                &lt;/div&gt;
+                            Hello, this is visualize css.
+                            Today, lets learn about display attribute of css.
+                            &lt;div style=&#123;display: "{displayData[activeLabel].property}"&#125;
+                            &gt;Test element.&lt;/div&gt;
+                            This is an amazing attribute isn't it?
+                            &lt;/div&gt;
                         </code>
                     </section>
-                    <section  className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
+                    <section className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
                         <div className='text-center text-2xl'>Insights</div>
                         <div className='text-md'>{displayData[activeLabel].insight}</div>
                         <div className=' text-xl'>Where it is not applied?</div>
