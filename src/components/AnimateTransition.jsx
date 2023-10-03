@@ -39,7 +39,7 @@ function AnimateTransition({ desc }) {
         `}
             </style>
             <div
-                className={`border-2 border-red-500 max-w-2xl min-w-[25rem] overflow-hidden rounded-md mb-1 text-white ${showContent ? 'animate-height' : ''
+                className={`max-w-2xl min-w-[25rem] overflow-hidden rounded-md mb-1 text-white ${showContent ? 'animate-height' : ''
                     }`}
                 style={{ maxHeight: height }}
             >
