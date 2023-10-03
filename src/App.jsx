@@ -3,8 +3,8 @@ import { MantineProvider } from '@mantine/core';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import { SidebarProvider } from "./context/sidebarcontext.jsx"
-import { Home, GetStartedPage, About, ErrorPage } from './pages'
-import { CssSelector, Display, Fonts, Colors } from './pages/contents';
+import { Home, About, ErrorPage } from './pages'
+import { GetStartedPage, CssSelector, Display, Fonts, Colors } from './pages/contents';
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
