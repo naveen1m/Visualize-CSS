@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react'
 import { displayData } from '../../data'
 import "../../components/display/displayStyle.css"
-import { DescAnimate, Syntaxhighlighter } from '../../components';
+import { AnimateTransition, Syntaxhighlighter } from '../../components';
 function Display() {
     const [activeLabel, setActiveLabel] = useState(0);
     const handleComponentClick = (index) => {
@@ -52,7 +52,7 @@ function Display() {
                         </code>
                     </section>
                     <section className='flex flex-col justify-around  p-3 py-5 rounded-md w-full'>
-                        <DescAnimate desc={displayData[activeLabel].insight} />
+                        <AnimateTransition desc={displayData[activeLabel].insight} />
                         <div className=' text-xl'>Where it is not applied?</div>
                         <ul className='list-disc list-inside'>{listItems}</ul>
                     </section>

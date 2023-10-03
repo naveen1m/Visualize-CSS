@@ -3,6 +3,7 @@ export { default as Navbar } from './Navbar'
 export { default as DescAnimate } from './DescAnimate'
 export { default as Syntaxhighlighter } from './Syntaxhighlighter'
 export { default as CopyToClipboard } from './CopyToClipboard'
+export { default as AnimateTransition } from './AnimateTransition'
 
 export { default as FontFamily } from './fonts/FontFamily'
 export { default as FontSText } from './fonts/FontSText'
