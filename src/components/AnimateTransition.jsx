@@ -9,7 +9,7 @@ function AnimateTransition({ desc }) {
 
     useEffect(() => {
         setKey((prevKey) => prevKey + 1);
-        setHeight(`${contentRef.current.scrollHeight / 16}rem`); // Convert height to rem units
+        setHeight(`${(contentRef.current.scrollHeight / 16) + .5}rem`); // Convert height to rem units
         setTimeout(() => {
             setShowContent(true);
         }, 500);
