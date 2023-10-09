@@ -71,7 +71,8 @@ export const navigationData = [
     }
     ,
     {
-        label: "Width and Height"
+        label: "Width and Height",
+        link: '/wnh'
     }
     ,
     {
@@ -89,6 +90,7 @@ export const navigationData = [
     },
     {
         label: "Float",
+        link: '/float',
         children: [
             { label: 'Float property' },
             { label: 'Clear property' },
