@@ -4,7 +4,7 @@ import { Carousel } from 'flowbite-react';
 export default function Carousel_slide() {
   return (
 
-    <div className='border-2 border-red-600 -z-10 mb-0  h-[80%] mt-0 mx-8 ' >
+    <div className='border-2 border-red-600 -z-10 mb-0  h-[80%] mt-11 mx-8 ' >
       <Carousel
         leftControl=""
         rightControl=""

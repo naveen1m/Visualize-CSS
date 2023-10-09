@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import { MantineProvider } from '@mantine/core';
-import { BrowserRouter as Router, Routes, Route, useRoutes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import { SidebarProvider } from "./context/sidebarcontext.jsx"
 import { Home, GetStartedPage, About, ErrorPage } from './pages'
-import { CssSelector, Display, Fonts , Float, WandH } from './pages/contents';
+import { GetStartedPage, CssSelector, Display, Fonts, Colors, Float, WandH } from './pages/contents';
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
@@ -21,31 +21,30 @@ function App() {
       }}
     >
       <Router>
-        <Navbar />
-        <div className='flex flex-row max-w-full'>
-          <section className='content'>
-            {sidebar ? <Sidebar /> : ""}
-          </section>
-
-          <section className='content' style={{ width: "10000px" }}>
-            <Routes>
+        <div className=' '>
+          <Navbar />
+          <div>
+            <section className=' flex flex-grow flex-row w-full'>
+              {sidebar ? <Sidebar /> : ""}
+            </section>
+            <section className={`max-w-full ${sidebar ? 'ml-52' : 'ml-0'} `} >
+              <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/getstarted' element={<GetStartedPage />} />
               <Route path='/selector' element={<CssSelector />} />
               <Route path='/display' element={<Display />} />
               <Route path='/fonts' element={<Fonts />} />
+              <Route path='/colors' element={<Colors />} />
               <Route path='/float' element={<Float />} />
               <Route path='/wnh' element={<WandH />} />
-
-
-
+                
               <Route path='*' element={<ErrorPage />} />
-            </Routes>
-          </section>
 
+              </Routes>
+            </section>
+          </div>
         </div>
-
       </Router>
     </MantineProvider>
 
