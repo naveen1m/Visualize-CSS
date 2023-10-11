@@ -4,11 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import { SidebarProvider } from "./context/sidebarcontext.jsx"
 import { Home, About, ErrorPage } from './pages'
-import { GetStartedPage, CssSelector, Display, Fonts, Colors, Background, Images } from './pages/contents';
+import { GetStartedPage, CssSelector, Display, Fonts, Colors, Float, WandH, Boxmodel } from './pages/contents';
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
-
 
 function App() {
   const [sidebar, setSidebar] = useContext(SidebarContext);
@@ -39,10 +38,11 @@ function App() {
                 <Route path='/colors' element={<Colors />} />
                 <Route path='/background' element={<Background />} />
                 <Route path='/images' element={<Images />} />
+                <Route path='/wnh' element={<WandH />} />
+                <Route path='/float' element={<Float />} />
+                <Route path='/boxmodel' element={<Boxmodel />} />
 
                 <Route path='*' element={<ErrorPage />} />
-
-
               </Routes>
             </section>
           </div>
