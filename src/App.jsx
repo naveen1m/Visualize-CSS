@@ -8,6 +8,7 @@ import { GetStartedPage, CssSelector, Display, Fonts, Colors, Float, WandH } fro
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
+import Boxmodel from './pages/contents/Boxmodle';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             </section>
             <section className={`max-w-full ${sidebar ? 'ml-52' : 'ml-0'} `} >
               <Routes>
+
               <Route path='/' element={<Home />} />
               <Route path='/about' element={<About />} />
               <Route path='/getstarted' element={<GetStartedPage />} />
@@ -37,10 +39,11 @@ function App() {
               <Route path='/fonts' element={<Fonts />} />
               <Route path='/colors' element={<Colors />} />
               <Route path='/float' element={<Float />} />
+              <Route path='/boxmodel' element={<Boxmodel />} />
               <Route path='/wnh' element={<WandH />} />
                 
               <Route path='*' element={<ErrorPage />} />
-
+              
               </Routes>
             </section>
           </div>
