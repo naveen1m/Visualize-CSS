@@ -8,6 +8,7 @@ import { GetStartedPage, CssSelector, Display, Fonts, Colors } from './pages/con
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
+import Boxmodel from './pages/contents/Boxmodle';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
                 <Route path='/display' element={<Display />} />
                 <Route path='/fonts' element={<Fonts />} />
                 <Route path='/colors' element={<Colors />} />
+                <Route path='/boxmodel' element={<Boxmodel />} />
 
                 <Route path='*' element={<ErrorPage />} />
 
