@@ -3,9 +3,9 @@ import { RiLoopLeftLine } from 'react-icons/ri'
 function Boxmodel(){
     const [mgstate, setMgstate] = useState(true);
     const [mgcontent, setMgcontent] = useState("8px");
-    const marginClick = ()=>{
+    const marginClick = async ()=>{
         setMgstate(!mgstate);
-        if(mgstate){
+        if(!mgstate){
             setMgcontent("8px");
         }
         else{
@@ -16,7 +16,7 @@ function Boxmodel(){
     const [brcontent, setBrcontent] = useState("2px");
     const borderClick = ()=>{
         setBrstate(!brstate);
-        if(brstate){
+        if(!brstate){
             setBrcontent("2px");
         }
         else{
@@ -27,7 +27,7 @@ function Boxmodel(){
     const [pdcontent, setPdcontent] = useState("0px");
     const paddingClick = ()=>{
         setPdstate(!pdstate);
-        if(pdstate){
+        if(!pdstate){
             setPdcontent("0px");
         }
         else{
