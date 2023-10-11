@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar } from './components';
 import { SidebarProvider } from "./context/sidebarcontext.jsx"
 import { Home, About, ErrorPage } from './pages'
-import { GetStartedPage, CssSelector, Display, Fonts, Colors, Float, WandH, Boxmodel } from './pages/contents';
+import { GetStartedPage, CssSelector, Display, Fonts, Colors, Float, WandH, Boxmodel, Background, Images } from './pages/contents';
 
 import SidebarContext from "./context/sidebarcontext.jsx"
 import Sidebar from './components/sidebar/Sidebar.jsx';
@@ -29,18 +29,20 @@ function App() {
             <section className={`max-w-full ${sidebar ? 'ml-52' : 'ml-0'} `} >
               <Routes>
 
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/getstarted' element={<GetStartedPage />} />
-              <Route path='/selector' element={<CssSelector />} />
-              <Route path='/display' element={<Display />} />
-              <Route path='/fonts' element={<Fonts />} />
-              <Route path='/colors' element={<Colors />} />
-              <Route path='/float' element={<Float />} />
-              <Route path='/boxmodel' element={<Boxmodel />} />
-              <Route path='/wnh' element={<WandH />} />
-                
-              <Route path='*' element={<ErrorPage />} />
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/getstarted' element={<GetStartedPage />} />
+                <Route path='/selector' element={<CssSelector />} />
+                <Route path='/display' element={<Display />} />
+                <Route path='/fonts' element={<Fonts />} />
+                <Route path='/colors' element={<Colors />} />
+                <Route path='/float' element={<Float />} />
+                <Route path='/boxmodel' element={<Boxmodel />} />
+                <Route path='/wnh' element={<WandH />} />
+                <Route path='/background' element={<Background />} />
+                <Route path='/images' element={<Images />} />
+
+                <Route path='*' element={<ErrorPage />} />
 
               </Routes>
             </section>

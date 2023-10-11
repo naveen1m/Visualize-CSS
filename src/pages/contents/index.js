@@ -7,3 +7,4 @@ export { default as Float } from "./Float";
 export { default as WandH } from "./WandH";
 export { default as Boxmodel } from "./Boxmodel";
 export { default as Background } from "./Background"
+export { default as Images } from "./Images"
