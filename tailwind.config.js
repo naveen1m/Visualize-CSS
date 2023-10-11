@@ -11,16 +11,6 @@ export default {
         "1/2": "370px",
       },
     },
-    borderWidth: {
-      DEFAULT: "1px",
-      0: "0",
-      "05": "1.5px",
-      2: "2px",
-      3: "3px",
-      4: "4px",
-      6: "6px",
-      8: "8px",
-    },
   },
   plugins: [
     require("flowbite/plugin"),
