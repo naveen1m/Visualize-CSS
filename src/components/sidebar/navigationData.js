@@ -1,5 +1,6 @@
 export const navigationData = [
     {
+
         label: 'Get started',
         link: '/getstarted'
     },
@@ -10,6 +11,7 @@ export const navigationData = [
     {
         label: 'Display',
         link: '/display'
+
         // children: [
         //     { label: 'First child link', link: '/first' },
         //     { label: 'Second child Link' },
@@ -23,66 +25,66 @@ export const navigationData = [
         // ],
     },
     {
-        label: 'Fonts',
-        link: '/fonts',
+        label: "Fonts",
+        link: "/fonts",
         children: [
             {
-                label: 'Font families',
-                link: '/fonts/fontfamily'
+                label: "Font families",
+                link: "/fonts/fontfamily",
             },
 
             {
-                label: 'Font Size',
-                link: 'fonts/fontsize'
+                label: "Font Size",
+                link: "fonts/fontsize",
             },
             {
-                label: 'Font weight',
-                link: 'fonts/fontweight'
+                label: "Font weight",
+                link: "fonts/fontweight",
             },
 
             {
-                label: 'Font style',
-                link: 'fonts/fontstyle'
+                label: "Font style",
+                link: "fonts/fontstyle",
             },
 
             {
-                label: 'Text decoration',
-                link: 'fonts/textdecoration'
+                label: "Text decoration",
+                link: "fonts/textdecoration",
             },
             {
-                label: 'Font families',
-                link: '/fonts/#fontfamilies'
+                label: "Font families",
+                link: "/fonts/#fontfamilies",
             },
-            { label: 'Font Size' },
-            { label: 'Font style' },
-            { label: 'Text decoration' }
+            { label: "Font Size" },
+            { label: "Font style" },
+            { label: "Text decoration" },
         ],
     },
     {
-        label: 'Colors',
-        link: '/colors',
+        label: "Colors",
+        link: "/colors",
         children: [
             {
-                label: 'hex triplet',
-                link: '/colors/#hex'
+                label: "hex triplet",
+                link: "/colors/#hex",
             },
             {
-                label: 'rgb() Notation',
-                link: '/colors/#rgb'
+                label: "rgb() Notation",
+                link: "/colors/#rgb",
             },
             {
-                label: 'rgba() Notation',
-                link: '/colors/#rgba'
+                label: "rgba() Notation",
+                link: "/colors/#rgba",
             },
             {
-                label: 'hsl() Notation',
-                link: '/colors/#hsl'
+                label: "hsl() Notation",
+                link: "/colors/#hsl",
             },
             {
-                label: 'hsla() Notation',
-                link: '/colors/#hsla'
+                label: "hsla() Notation",
+                link: "/colors/#hsla",
             },
-        ]
+        ],
 
     },
     {
@@ -104,39 +106,38 @@ export const navigationData = [
             { label: 'Image Size' },
             { label: 'Image Borders' },
         ]
-    }
-    ,
+
+    },
     {
-        label: "Width and Height"
-    }
-    ,
+        label: "Width and Height",
+        link: "/wnh",
+    },
     {
         label: "Box Model",
+        link: "/boxmodel",
         children: [
-            { label: 'Content' },
-            { label: 'Padding' },
-            { label: 'Border' },
-            { label: 'Margin' },
-        ]
-    }
-    ,
+            { label: "Content" },
+            { label: "Padding" },
+            { label: "Border" },
+            { label: "Margin" },
+        ],
+    },
     {
-        label: "Positioning"
+        label: "Positioning",
     },
     {
         label: "Float",
-        children: [
-            { label: 'Float property' },
-            { label: 'Clear property' },
-        ]
+        link: "/float",
+        children: [{ label: "Float property" }, { label: "Clear property" }],
     },
     {
-        label: "Flex box"
+        label: "Flex box",
     },
     {
-        label: "CSS Grid"
+        label: "CSS Grid",
     },
     {
-        label: "Media Queries"
-    }
+        label: "Media Queries",
+    },
 ];
+
