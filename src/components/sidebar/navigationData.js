@@ -1,15 +1,17 @@
 export const navigationData = [
     {
-        label: "Get started",
-        link: "/getstarted",
+
+        label: 'Get started',
+        link: '/getstarted'
     },
     {
-        label: "CSS Selector",
-        link: "/selector",
+        label: 'CSS Selector',
+        link: '/selector'
     },
     {
-        label: "Display",
-        link: "/display",
+        label: 'Display',
+        link: '/display'
+
         // children: [
         //     { label: 'First child link', link: '/first' },
         //     { label: 'Second child Link' },
@@ -83,6 +85,7 @@ export const navigationData = [
                 link: "/colors/#hsla",
             },
         ],
+
     },
     {
         label: "Background",
@@ -103,6 +106,7 @@ export const navigationData = [
             { label: 'Image Size' },
             { label: 'Image Borders' },
         ]
+
     },
     {
         label: "Width and Height",
@@ -136,3 +140,4 @@ export const navigationData = [
         label: "Media Queries",
     },
 ];
+
