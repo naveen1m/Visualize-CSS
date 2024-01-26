@@ -20,6 +20,7 @@ function App() {
       }}
     >
       <Router>
+
         <div className=' '>
           <Navbar />
           <div>
@@ -28,6 +29,8 @@ function App() {
             </section>
             <section className={`max-w-full ${sidebar ? 'ml-52' : 'ml-0'} `} >
               <Routes>
+               
+
 
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<About />} />

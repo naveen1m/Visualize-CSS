@@ -31,4 +31,3 @@ export { default as BgColor } from './background/BgColor'
 export { default as BgImage } from './background/BgImage'
 export { default as BgVideo } from './background/BgVideo'
 
-
