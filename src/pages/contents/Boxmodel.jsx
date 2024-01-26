@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { RiLoopLeftLine } from 'react-icons/ri'
+import Margin from "../../components/boxmodel/margin";
 function Boxmodel(){
     const [mgstate, setMgstate] = useState(true);
     const [mgcontent, setMgcontent] = useState("8px");
@@ -162,7 +163,7 @@ function Boxmodel(){
                     </div>
                     
                 </section>
-            
+                <Margin/>
         </Fragment>
     )
 }
