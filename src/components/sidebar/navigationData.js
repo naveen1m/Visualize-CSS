@@ -1,4 +1,5 @@
 export const navigationData = [
+
   {
     label: "Get started",
     link: "/getstarted",
@@ -135,3 +136,4 @@ export const navigationData = [
     label: "Media Queries",
   },
 ];
+
