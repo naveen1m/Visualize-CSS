@@ -7,4 +7,12 @@ export default [
   {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
   pluginReactConfig,
+  {
+    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
 ];
