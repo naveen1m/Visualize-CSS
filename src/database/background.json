@@ -38,10 +38,10 @@
                 },
                 "keyword":[ "closest-side", "closet-corner", "farthest-side", "farthest-corner" ],
                 "keywordsDescription": {
-                  "closestSide": "Specifies that the size of the gradient shapes should be equal to the shorter side of the element's bounding box.",
-                  "closetCorner": "Specifies that the size of the gradient shapes should be equal to the distance from the center to the closest corner of the element's bounding box.",
-                  "farthestSide": "Specifies that the size of the gradient shapes should be equal to the longer side of the element's bounding box.",
-                  "farthestCorner": "Specifies that the size of the gradient shapes should be equal to the distance from the center to the farthest corner of the element's bounding box."
+                  "closest-side": "Specifies that the size of the gradient shapes should be equal to the shorter side of the element's bounding box.",
+                  "closet-corner": "Specifies that the size of the gradient shapes should be equal to the distance from the center to the closest corner of the element's bounding box.",
+                  "farthest-side": "Specifies that the size of the gradient shapes should be equal to the longer side of the element's bounding box.",
+                  "farthest-corner": "Specifies that the size of the gradient shapes should be equal to the distance from the center to the farthest corner of the element's bounding box."
               }
           },
           "position":{

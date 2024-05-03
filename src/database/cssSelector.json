@@ -1,3 +1,39 @@
 {
-  
+  "selector": {
+    "universalSelector": {
+      "symbol": "*",
+      "description": "Selects all elements on the page."
+    },
+    "typeSelector": {
+      "description": "Selects elements based on their tag name. Example: h1, p, div, etc."
+    },
+    "classSelector": {
+      "description": "Selects elements based on their class attribute value. Example: .my-class"
+    },
+    "idSelector": {
+      "description": "Selects an element based on its unique ID attribute value. Example: #my-id"
+    },
+    "attributeSelector": {
+      "description": "Selects elements based on their attribute or attribute value."
+    },
+    "descendantSelector": {
+      "description": "Selects elements that are descendants (children, grandchildren, etc.) of another element. Example: div p (selects all <p> elements inside <div> elements)"
+    },
+    "childSelector": {
+      "description": "Selects elements that are direct children of another element. Example: ul > li (selects all <li> elements that are direct children of <ul> elements)"
+    },
+    "adjacentSiblingSelector": {
+      "description": ""
+    },
+    "generalSiblingSelector": {
+      "description": ""
+    },
+    "PseudoclassSelector": {
+      "description": ""
+    },
+    "combinators": {
+      "description": "Used to combine multiple selectors. Examples: descendant combinator (div p), child combinator (ul > li), adjacent sibling combinator (h1 + p) general sibling combinator (div ~ p)"
+    },
+    "description": "In CSS, selectors are used to target and select specific HTML elements to apply styles to them."
+  }
 }
