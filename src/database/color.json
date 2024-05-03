@@ -1,0 +1,38 @@
+{
+  "color": {
+    "propertyName":"color",
+    "keyword":{
+      "parentCorlor":{
+        "currentColor": "currentColor",
+        "description": "currentColor is used to inherit the color value from the parent element. When applied to a CSS property, currentColor dynamically evaluates to the computed value of the color property of the element on which it's used."
+      },
+      "colorName": {
+        "name": [ "red", "blue", "black" ],
+        "description": "Color keywords are predefined names that represent specific colors. They allow you to specify colors in a human-readable format, making it easier to understand and maintain CSS code."
+      },
+      "note": "CSS keywords are case-insensitive."
+    },
+    "hexadecimal":{
+      "description": "CSS colors can be written as a hex triplet, using three values to represent the red, green, and blue components. Each value ranges from 00 to FF or 0 to 255 in decimal form.  Uppercase and/or lowercase Hexadecimal values may be used (i.e. #3fc = #3FC = #33ffCC). Hex values always start with a pound sign (#), are up to six digits long, and are case-insensitive. For example, the browser interprets #369 as #336699. If you want #306090 instead, you must specify it explicitly.",
+      "funFact": "The total number of colors that can be represented with hex notation is 256^3 or 16,777,216."
+    },
+    "function":{
+      "rgb":{
+        "notation": "rgb(<red>, <green>, <blue>)",
+        "description": "RGB is an additive color model that represents colors as mixtures of red, green, and blue light. Each color channel ranges from 0 to 255, equivalent to 0% to 100% in percentages, or 00 to FF in hexadecimal notation. A value of 0 indicates no intensity (no light), while a value of 255 represents full intensity (maximum light)."
+      },
+      "rgba":{
+        "notation": "rgba(<red>, <green>, <blue>, <alpha>)",
+        "description": "RGBA is an extension of the RGB color model, where 'A' stands for 'Alpha' and represents the opacity of the color. It allows you to specify the intensity of red, green, and blue, along with an additional parameter for transparency. The alpha value ranges from 0 (fully transparent) to 1 (fully opaque), allowing you to create semi-transparent colors. Each color channel still ranges from 0 to 255 or from 0% to 100%, like in the RGB model."
+      },
+      "hsl":{
+        "notation": "hsl(<hue>, <saturation>%, <lightness>%)",
+        "description": "HSL stands for hue ('which color'), saturation ('how much color') and lightness ('how much white'). It is a color model in CSS representing colors based on hue (0-360 degrees), saturation (0-100%), and lightness (0-100%). It offers a human-readable way to define colors, with hue determining the type of color, saturation its intensity, and lightness its brightness."
+      },
+      "hsla":{
+        "notation": "hsla(<hue>, <saturation>%, <lightness>%, <alpha>)",
+        "description": "HSLA (Hue, Saturation, Lightness, Alpha) is an extension of the HSL color model in CSS, adding an alpha channel for transparency control. It allows you to define colors based on hue, saturation, and lightness, along with an alpha value (0-1) for transparency. This provides flexibility in creating semi-transparent colors while retaining the intuitive nature of the HSL color model."
+      }
+    }
+  }
+}
