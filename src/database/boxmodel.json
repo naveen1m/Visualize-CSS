@@ -1,0 +1,87 @@
+{
+    "marginAbsoluteData": [
+      {
+        "data": "margin",
+        "insight": "the margin property defines the space outside the border of an element. It controls the amount of space between an element's border and adjacent elements in the layout.",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin",
+        "value": "10px"
+      },
+      {
+        "data": "marginTop",
+        "insight": "Sets the margin above the element.",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin-top",
+        "value": "10px"
+      },
+      {
+        "data": "marginRight",
+        "insight": "Sets the margin to the right of the element.",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin-right",
+        "value": "10px"
+      },
+      {
+        "data": "marginBottom",
+        "insight": "Sets the margin below the element.",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin-bottom",
+        "value": "10px"
+      },
+      {
+        "data": "marginLeft",
+        "insight": "Sets the margin to the left of the element.",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin=-left",
+        "value": "10px"
+      }
+    ],
+    "marginShorthandData": [
+      {
+        "data": "margin: top right bottom left;",
+        "insight": "used to set the margins for all four sides of an element individually",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin",
+        "value": "10px 10px 10px 10px"
+      },
+      {
+        "data": "margin: top x-axis bottom ;",
+        "insight": "here \"top\" Specifies the margin for the top side of the element, \"x-axis\" Specifies the margin for the right and left sides of the element and \"bottom\"  Specifies the margin for the bottom side of the element. ",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin",
+        "value": "10px 10px 10px"
+      },
+      {
+        "data": "margin: y-axis x-axis;",
+        "insight": "Here \"y-axis\" Specifies the margin for the top and bottom sides of the element and \"x-axis\" Specifies the margin for the left and right sides of the element.",
+        "whenNotApplied": [
+          "parent container has property : flex, inline-flex, none, grid, inline-grid.",
+          "When the element is : inline, absolute positioned, float"
+        ],
+        "attribute": "margin",
+        "value": "10px 10px"
+      }
+    ]
+  }
+  

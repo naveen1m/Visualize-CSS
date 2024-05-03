@@ -1,0 +1,102 @@
+{
+  "display": [
+    {
+      "data": "display: block;",
+      "property": "block",
+      "containerProperty": "",
+      "boxProperty": "block",
+      "insight": "property is used to render an element as a block-level element. Block-level elements typically start on a new line and take up the full width available, pushing subsequent elements to a new line",
+      "whenNotApplied": [
+        "parent div has display property: flex, inline-flex, none, grid, inline-grid."
+      ]
+      
+    },
+    {
+      "data": "display: inline;",
+      "property": "inline",
+      "containerProperty": "",
+      "boxProperty": "inline",
+      "insight": " property is used to render an element as an inline-level element. Inline-level elements do not start on a new line and only take up as much width as necessary. ",
+      "whenNotApplied": [
+        "parent div has display property: flex, inline-flex, none, grid, inline-grid."
+      ]
+      
+    },
+    {
+      "data": "display: inline-block;",
+      "property": "inline-block",
+      "containerProperty": "",
+      "boxProperty": "inline-block",
+      "insight": " property combines features of both inline and block elements. When applied to an element, it behaves as an inline-level element but allows you to set width, height, margins, and padding, just like block-level elements",
+      "whenNotApplied": [
+        "parent div has display property: flex, inline-flex, none, grid, inline-grid."
+      ]
+      
+    },
+    {
+      "data": "display: flex;",
+      "property": "flex",
+      "containerProperty": "flex",
+      "boxProperty": "",
+      "insight": "property is part of the Flexible Box Layout module, which provides a more efficient way to design, align, and distribute space among items in a container, even when their size is unknown or dynamic ",
+      "whenNotApplied": [
+        "parent div has display property: none, grid, inline-grid."
+      ]
+      
+    },
+    {
+      "data": "display: inline-flex;",
+      "property": "inline-flex",
+      "containerProperty": "block",
+      "boxProperty": "inline-flex",
+      "insight": "property combines the features of both an inline-level element and a flex container. It establishes an inline-level flex container, allowing you to apply flexbox layout properties to the container while still behaving like an inline-level element.",
+      "whenNotApplied": [
+        "parent div has display property: flex, inline-flex, none, grid, inline-grid."
+      ]
+    },
+    {
+      "data": "display: none;",
+      "property": "none",
+      "containerProperty": "",
+      "boxProperty": "none",
+      "insight": "property is used to hide an element from the page entirely, essentially removing it from the document flow. When applied to an element, it renders the element and its content invisible and does not allocate any space for it in the layout.",
+      "whenNotApplied": [
+        "parent div has display property: flex, inline-flex, none, grid, inline-grid."
+      ]
+    
+    },
+    {
+      "data": "display: grid;",
+      "property": "grid",
+      "containerProperty": "grid",
+      "boxProperty": "",
+      "insight": "property is part of the CSS Grid Layout module, which provides a powerful two-dimensional grid-based layout system for arranging content on web pages. When applied to an element, it turns the element into a grid container and its children into grid items, allowing you to create complex layouts with rows and columns",
+      "whenNotApplied": [
+        "parent div has display property: none, grid, inline-grid."
+      ]
+      
+    },
+    {
+      "data": "display: inline-grid;",
+      "property": "inline-grid",
+      "containerProperty": "",
+      "boxProperty": "inline-grid",
+      "insight": "property is similar to `display: grid;`, but it behaves as an inline-level element while still creating a grid container. This means it allows you to use CSS Grid layout properties to organize its children into a grid, while flowing within the content of a line, similar to inline elements",
+      "whenNotApplied": [
+        "parent div has display property: none, grid, inline-grid."
+      ]
+      
+    },
+    {
+      "data": "display: contents",
+      "property": "contents",
+      "containerProperty": "",
+      "boxProperty": "contents",
+      "insight": "property is a unique value that alters the way an element is displayed without affecting its children. When applied to an element, it causes the element itself to be rendered as if it were not present, while its children are promoted to the level of its parent, effectively bypassing the element's own presence in the rendering tree",
+      "whenNotApplied": [
+        "parent div has display property: none, grid, inline-grid."
+      ]
+      
+    }
+  ]
+}
