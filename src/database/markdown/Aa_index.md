@@ -12,4 +12,4 @@
 12. Flex box
 13. CSS Grid
 14. Media Queries
-15. Additional properties (like opacity, overflow, z-index, ...)
+15. Additional properties (like opacity, overflow, z-index, backdrop-filter ...)
