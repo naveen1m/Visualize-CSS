@@ -1,4 +1,3 @@
-// text decoration data
 const DecorationOption =[
     {
         name: 'overline',

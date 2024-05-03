@@ -6,17 +6,17 @@ const WHopt =[
        },
        {
         name: 'min-content',
-        display: `heightt: min-content;`,
+        display: `height: min-content;`,
         syntax: `Bold font weight. Same as 700.`
        },
        {
         name: 'fit-content(20em)',
-        display: `heightt: fit-content(20em);`,
+        display: `height: fit-content(20em);`,
         syntax: `One relative font weight heavier than the parent element. `
        },
        {
         name: 'auto',
-        display: `heightt: auto;`,
+        display: `height: auto;`,
         syntax: `One relative font weight lighter than the parent element. `
        },
       

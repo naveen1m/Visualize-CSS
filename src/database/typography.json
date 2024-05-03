@@ -1,0 +1,68 @@
+{
+    "font": {
+    "fontfamily": {
+        "keyword": [ "system-ui", "Arial", "Courier New", "Georgia", "Verdana", "Tahoma", "Serif", "Sans-serif", "Monospace", "Courier New", "Courier", "monospace", "Cursive", "'Brush Script MT'", "cursive", "Fantasy", "Copperplate", "Papyrus", "fantasy", "emoji", "math", "fangsong", "inherit" ],
+        "keywordDescription": {
+            "system-ui": "Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.",
+            "Arial": "Arial contains more humanist characteristics than many of its predecessors and as such is more in tune with the mood of the last decades of the twentieth century.The overall treatment of curves is softer and fuller than in most industrial style sans serif faces.",
+            "Courier New": "Courier New is a monospaced font family known for its distinctive typewriter-like appearance. It features fixed-width characters, where each character takes up the same amount of horizontal space, making it easy to align text in columns.",
+            "Georgia": "Georgia is a serif font family designed for digital screens and print. It is known for its elegant and traditional appearance, with distinctive serifs on the characters. Georgia's design combines readability with a touch of sophistication, making it suitable for both online and offline content.",
+            "Verdana": "The Verdana fonts exhibit characteristics derived from the pixel rather than the pen, the brush or the chisel. The relationship between straight, curved and diagonal strokes has been painstakingly developed to ensure that the pixel patterns at small sizes are pleasing, clear and legible.",
+            "Tahoma": "Tahoma is one of Microsoft's new sans serif typeface families. It consists of two Windows TrueType fonts (regular and bold), and was created to address the challenges of on-screen display, particularly at small sizes in dialog boxes and menus.",
+            "Serif": "Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.",
+            "Sans-serif": "Glyphs have stroke endings that are plain.",
+            "Monospace": "All glyphs have the same fixed width.",
+            "'Courier New', Courier, monospace": "The font-family declaration 'Courier New', Courier, monospace; specifies the use of the Courier New typeface as the preferred font, with a fallback to the generic Courier font and, if necessary, any available monospace font.",
+            "Cursive": "Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.",
+            "'Brush Script MT', cursive": "'Brush Script MT' is a cursive font family known for its elegant and handwritten appearance. It simulates the look of handwritten script with flowing, brush-like strokes, giving it a distinct and personalized feel. This font style is often chosen for its decorative and artistic qualities, making it suitable for various creative and informal design projects, such as invitations, greeting cards, and artistic displays. 'Brush Script MT' adds a touch of whimsy and personality to text, making it an excellent choice for conveying a warm and inviting atmosphere in printed and digital materials.",
+            "Fantasy": "Fantasy fonts are primarily decorative fonts that contain playful representations of characters.",
+            "Copperplate, Papyrus, fantasy": "This declaration tells the browser to use the first available font from the list, and if that font is not available on the user's device, it should fall back to the next font in the list, and so on until a suitable font is found or until a generic font type (like 'serif,' 'sans-serif,' or 'monospace') is used as a last resort.",
+            "emoji": "Fonts that are specifically designed to render emoji.",
+            "math": "This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.",
+            "fangsong": "A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.",
+            "inherit": "instructs an element to inherit its font-family property from its closest parent element. This ensures that the element's text uses the same font-family as its parent, contributing to a consistent and harmonious typography style within a document or web page. It allows for the propagation of font choices from parent to child elements, simplifying the management of font styles and maintaining design cohesion."
+        },
+        "description":"The font-family property in CSS is used to specify the font or font family for the text content of an element. It allows you to set a prioritized list of font names or generic font families."
+    },
+
+    "fontweight": {
+        "keyword": [ "normal", "bold", "bolder", "lighter", "100", "900" ],
+        "keywordDescription": {
+            "normal": "Normal font weight. Same as 400",
+            "bold": "Bold font weight. Same as 700.",
+            "bolder": "One relative font weight heavier than the parent element.",
+            "lighter": "One relative font weight lighter than the parent element.",
+            "100": "Font weight 100 is the lightest and thinnest variation of a typeface. It represents the lowest level of thickness or boldness within a font family.",
+            "900": "Font weight 900 is the boldest and heaviest variation of a typeface. It represents the maximum level of thickness or boldness within a font family. Text set with a font weight of 900 appears exceptionally strong and commanding, making it well-suited for attention-grabbing headlines, titles, or other text elements that require maximum visual impact."
+        },
+        "description": "The font-weight property in CSS is used to set the weight or thickness of the font being used for the text content of an element. It allows you to control the boldness or lightness of the font."
+    },
+
+    "fontstyle": {
+        "keyword": [ "oblique", "normal", "italic", "initial" ],
+        "keywordDescription": {
+            "oblique": "Selects a font that is classified as oblique. If no oblique version of the face is available, one classified as italic is used instead. If neither is available, the style is artificially simulated",
+            "normal": "This is default. Selects a font that is classified as normal within a font-family.",
+            "italic": "Selects a font that is classified as italic. If no italic version of the face is available, one classified as oblique is used instead. If neither is available, the style is artificially simulated.",
+            "initial": "This property value of the font-style property is used to make the font oblique. Oblique fonts are the sloped versions of the font. initial. Using this value, the browser will display the initial font style that is the default. Basically, this value sets the property to its default value."
+        },
+        "description": "it is used to specify the style of the font for text elements"
+    }
+},
+"text": {
+    "textdecoration": {
+        "propertyName": "text-decoration",
+        "keyword": [ "overline", "line-through", "underline", "overline underline", "underline dotted", "underline dotted red", "underline overline #FF3028" ],
+        "keywordDescription": {
+            "overline": "overline : draws a 1px line across the text, directly above its “top” point.",
+            "line-through": "A line-through is a text-decoration that adds a line through the text to sort of cancel it out. This can make the text a little difficult to read, but it can also be a useful way to “redact” information without eliminating it entirely.",
+            "underline": "underline : draws a 1px line across the text at its baseline. line-through : draws a 1px line across the text at its “middle” point.",
+            "overline underline": "text-decoration: overline underline; means that the text will have both an overline and an underline simultaneously.",
+            "underline dotted": "it means you are applying an underline to the text with a dotted line style.",
+            "underline dotted red": "it specifies that the text should be underlined with a red dotted line.",
+            "underline overline #FF3028": "it allows you to apply multiple text decorations to an element, including both underlines and overlines, and specify their color using hexadecimal color codes like #FF3028"
+        },
+        "description": "It is used to add decorative lines to text elements, such as underlines, overlines, line-throughs, and even blink effects"
+    }
+}
+}

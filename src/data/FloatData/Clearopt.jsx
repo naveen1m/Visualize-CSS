@@ -1,10 +1,9 @@
 const Clearopt =[
-    
       
     {
-    name: 'none',
+    value: 'none',
     display: `clear: none;`,
-    syntax: `It is a keyword indicating that the element is not moved down to clear past floating elements.`
+    details: `It is a keyword indicating that the element is not moved down to clear past floating elements.`
    },
    {
     name: 'left',

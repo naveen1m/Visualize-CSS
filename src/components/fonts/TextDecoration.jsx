@@ -1,78 +1,16 @@
 import React, { useState } from 'react'
-import styled from 'styled-components';
-import {DecorationOption} from '../../data';
-const Container = styled.div`
-  display: flex;
-  align-items: flex-start;
-  margin-top: 50px;
-`;
+import { Container, OptionsBox, OptionItem, TextContainer, DescriptionContainer } from '../../assets/StyledComponents'; // Import the styled components
+import typography from "../../database/typography.json"
 
-const OptionsBox = styled.div`
-  width: 300px;
-  height: 300px;
-  overflow-y: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #f0f0f0;
-  margin-left: 50px;
-  margin-bottom:50px;
-`;
-
-const OptionItem = styled.div`
-  font-size: 18px;
-  padding: 10px;
-  margin: 5px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  &:hover {
-    background-color: #dcdcdc;
-  }
-`;
-
-const TextContainer = styled.div`
-
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 24px;
-  margin-left: 20px;
-  width:800px;
-
-  
-  transition: background-color 0.3s, box-shadow 1s;
-  &:hover {
-    background-color: #f0f0f0;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
-  }
-`;
-
-const SyntaxContainer = styled.div`
-  margin-top: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 18px;
-  margin-left: 20px;
-  margin-bottom:50px;
-
-  height: 150px;
-  overflow-y: auto;
-  transition: background-color 0.3s, box-shadow 1s;
-  &:hover {
-    background-color: #f0f0f0;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
-  }
-`;
 
 
 function TextDecoration () {
     const [selectedFont, setSelectedFont] = useState('');
-    const [selectedFontSyntax, setSelectedFontSyntax] = useState('');
+    const [selectedFontDescription, setSelectedFontDescrption] = useState('');
 
-    const handleFontStretch = (font, syntax) => {
+    const handleFontStretch = (font, desc) => {
         setSelectedFont(font);
-        setSelectedFontSyntax(syntax);
+        setSelectedFontDescrption(desc);
       };
  
   return (
@@ -81,13 +19,13 @@ function TextDecoration () {
    <h2 className='mt-5 ml-12 mr-10 text-xl font-sans'>Text decoration is a CSS property that allows designers to add visual embellishments to text elements in web development. It includes various styling options that can enhance the appearance of text. </h2>
     <Container>
          <OptionsBox>
-           {DecorationOption.map((font, index) => (
+           {typography.textdecoration.keyword.map((font, index) => (
              <OptionItem
                key={index}
-               onClick={() => handleFontStretch(font.name, font.syntax)}
+               onClick={() => handleFontStretch(font, typography.textdecoration.keywordDescription[font])}
              
              >
-               {font.display}
+               {`text-decoration : ${font}`}
              </OptionItem>
            ))}
          </OptionsBox>
@@ -97,10 +35,10 @@ function TextDecoration () {
   <p>Change the font style by clicking on the options on the left side.</p>
 </TextContainer>
 
-         <SyntaxContainer>
+         <DescriptionContainer>
          Description: 
-           <pre>{selectedFontSyntax}</pre>
-         </SyntaxContainer>
+           <pre>{selectedFontDescription}</pre>
+         </DescriptionContainer>
          </div>
        </Container>
    </>
