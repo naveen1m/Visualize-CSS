@@ -1,0 +1,159 @@
+{
+  "background": {
+    "backgroundColor": {
+      "propertyName": "background-color",
+      "value": [ "transparent", "initial", "inherit", "red", "#00f", "rgb(0, 0, 0)", "rgba(0, 0, 0, 0.5)", "hsl(120, 100%, 50%)", "hsla(120, 100%, 50%, .3)"]
+    },
+    "backgroundGradient": {
+      "propertyName": "background",
+      "linearGradient": {
+        "functionName" : [ "linear-gradient()", "repeating-linear-gradient()" ],
+        "syntax": {
+          "norepeat": "linear-gradient( <direction>?, <color-stop-1>, <color-stop-2>, ...)",
+          "repeat": "repeating-linear-gradient( <direction>?, <color-stop-1>, <color-stop-2>, ...)" 
+        },
+        "functionParameter": {
+          "direction": "Could be an argument like to top, to bottom, to right or to left; or an angle as 0deg, 90deg... . The angle starts from to top and rotates clockwise. Can be specified in deg, grad, rad, or turn. If omitted, the gradient flows from top to bottom",
+          "colorStop": "List of colors, optionally followed each one by a percentage or length to display it at. For example,yellow 10%,rgba(0,0,0,.5) 40px,#fff 100%..."
+        },
+        "description": "A linear gradient in CSS is a way to create a gradual transition of colors along a straight line. It involves specifying a starting point, an ending point, and one or more color stops along the gradient line."
+      },
+      "raadialGradient":{
+        "functionName": [ "radial-gradient()", "repeating-radial-gradient()" ],
+        "syntax":{
+          "norepeat": "radial-gradient(shape size at position, <color-stop-1>, <color-stop-2>, ...)",
+          "repeat": "repeating-radial-gradient(shape size at position, <color-stop-1>, <color-stop-2>, ...)"
+        },
+        "functionParameter":{
+          "shape":{
+            "description": "Defines the shape from which the gradient starts. This shape is usually a circle, but it can also be an ellipse or another geometric shape. Default is ellipse.",
+            "value": [ "circle", "ellipse"]
+          },
+          "size":{
+            "description": "The size of the starting shape determines how far the gradient extends from the center point",
+            "value": 
+              {
+                "lengthValue":{
+                  "description": "You can specify the size of the gradient shapes using length values such as pixels (px), percentages (%), or any other valid CSS length unit."
+                },
+                "keyword":[ "closest-side", "closet-corner", "farthest-side", "farthest-corner"],
+                "keywordsDescription": {
+                  "closestSide": "Specifies that the size of the gradient shapes should be equal to the shorter side of the element's bounding box.",
+                  "closetCorner": "Specifies that the size of the gradient shapes should be equal to the distance from the center to the closest corner of the element's bounding box.",
+                  "farthestSide": "Specifies that the size of the gradient shapes should be equal to the longer side of the element's bounding box.",
+                  "farthestCorner": "Specifies that the size of the gradient shapes should be equal to the distance from the center to the farthest corner of the element's bounding box."
+              }
+          },
+          "position":{
+            "description": "Determines the center point of the gradient. This point serves as the starting point for the gradient, from which the colors radiate outward",
+            "value": {
+              "lengthValue":{
+                "description": "Specify the position of the center point of the gradient using length values such as pixels (px), percentages (%), or any other valid CSS length unit."
+              },
+              "keyword":[ "center", "top", "bottom", "left", "right" ],
+              "keywordsDescription":{
+                "direction": "Specifies that the position of the center point should be aligned with the respective edge of the element's bounding box.",
+                "center": "Specifies that the position of the center point should be centered along the respective axis (horizontal or vertical) of the element's bounding box."
+              }
+            }
+          },
+          "colorStop": "List of colors, optionally followed each one by a percentage or length to display it at. For example,yellow 10%,rgba(0,0,0,.5) 40px,#fff 100%..."
+        },
+        "description": "A radial gradient in CSS is a method for creating a gradual transition of colors that radiates outward from a central point. It involves specifying a starting shape, an ending shape, and one or more color stops along the gradient. The colors blend smoothly from the center to the outer edges of the shapes, creating a radial pattern."
+      }
+    },
+    "description": "you can set colors, gradients, and images as the background of an element. It is possible to specify various combinations of images, colors, and gradients, and adjust the size, positioning, and repetition (among others) of these."
+    },
+    "backgroundImage":{
+      "propertyName": "background-image",
+      "value": ["url()","initial", "inherit", "none"],
+      "valueDescription":{
+        "url": "The URL to the image. To specify more than one image, separate the URLs with a comma(,).",
+        "initial": "Sets this property to its default value.",
+        "inherit": "Inherits this property from its parent element.",
+        "none": "No background image"
+      },
+      "description": "The background-image property sets one or more background images for an element. By default, a background-image is placed at the top-left corner of an element, and repeated both vertically and horizontally."
+    },
+    "backgroundSize": {
+      "propertyName": "background-size",
+      "description": "The background-size property enables one to control the scaling of the background-image. It takes up to two values, which determine the scale/size of the resulting image in vertical and and horizontal direction. If the property is missing, its deemed auto in both width and height."
+    },
+    "backgroundPosition": {
+      "propertyName": "background-position",
+      "keyword": ["left", "right", "top", "bottom", "center" ],
+      "value": [ "left top", "left center", "left bottom", "right top", "right center", "right bottom", "center top", "center center", "center bottom", "10px 20px", "10% 20%", "right 20px bottom 10px" ],
+      "horizontally": {
+        "propertyName": "background-position-x",
+        "description": "This property sets the horizontal position of the background image. This property provide a more granular control over the background position compared to the shorthand background-position property."
+      },
+      "vertically": {
+        "propertyName": "background-position-y",
+        "description": "This property sets the vertical position of the background image.This property provide a more granular control over the background position compared to the shorthand background-position property."
+      },
+      "description": "The background-position property sets the starting position of a background image. The first value is the horizontal position and the second value is the vertical, <xpos ypos>. The background-position property can take one or two values, which can be specified using keywords, percentages, or length values. It's default value is 0% 0%",
+      "percentageExample": "background-position: 25% 75%; (positions the image 25% from the left and 75% from the top);",
+      "keywordExample": " background-position: center top; (centers the image horizontally and positions it at the top)",
+      "lengthValueExample": "background-position: 50px 100px; (positions the image 50 pixels from the left and 100 pixels from the top)",
+      "combinationExample": "background-position: right 20px bottom 10px; (positions the image 20 pixels from the right and 10 pixels from the bottom)"
+    },
+    "backgroundRepeat": {
+      "propertyName": "background-repeat",
+      "keyword": [ "repeat", "no-repeat", "repeat-x", "repeat-y", "space", "round", "initial", "inherit" ],
+      "keywordsDescription":{
+        "repeat": "This is the default value. It repeats the background image both horizontally and vertically to cover the entire background area.",
+        "no-repeat": "Prevents the background image from repeating. It displays the image only once within the background area.",
+        "repeat-x": "Repeats the background image horizontally (left to right).",
+        "repeat-y": "Repeats the background image vertically (top to bottom).",
+        "space": "Repeats the background image, but spaces the images out evenly to fill the background area. Any empty spaces are distributed evenly around the images.",
+        "round": " Similar to space, but instead of evenly distributing the empty space, it scales the images to fill the background area without any empty spaces."
+      },
+      "description": "The background-repeat property is used to control how a background image repeats (or tiles) within an element's background area. It allows you to specify whether the background image should repeat horizontally, vertically, or in both directions, or not repeat at all."
+    },
+    "backgroundOrigin": {
+      "propertyName": "background-origin",
+      "keyword": [ "padding-box", "border-box", "content-box", "initial", "inherit"],
+      "keywordsDescription":{
+        "padding-box": "This is default value. This means the background image will start from the inner edge of the padding and will extend into the content box.",
+        "border-box": "This means the background image will start from the outer edge of the border and will extend into the padding box.",
+        "content-box": "This means the background image will start from the inner edge of the content and will not extend into the padding or border areas."
+      },
+      "description": "The background-origin property scontrol the positioning area of a background image. It specifies the origin from which the background image is positioned, relative to the element's padding or border."
+    },
+    "backgroundClip": {
+      "propertyName": "background-clip",
+      "keyword": [ "border-box", "padding-box", "content-box", "initial", "inherit"],
+      "keywordsDescription": {
+        "border-box": "This is default value. The background extends to the outer edge of the border, covering the content, padding, and border areas.",
+        "padding-box": "he background extends to the outer edge of the padding, covering the content and padding areas, but not the border.",
+        "content-box": "he background extends to the outer edge of the padding, covering the content and padding areas, but not the border."
+      },
+      "description": "The background-clip property in CSS is used to control the painting area of a background image, color, or gradient. It determines how far the background should extend within the element's box model."
+    },
+    "backgroundAttachment": {
+      "propertyName": "background-attachment",
+      "keyword": [ "scroll", "fixed", "local", "initial", "inherit" ],
+      "keywordsDescription": {
+        "scroll": "This is default. The background image scrolls with the content.",
+        "fixed": "The background image is fixed relative to the viewport. When the content area is scrolled, the background image stays in the same position within the viewport.",
+        "local": "( needed to write it more clearly) for now - The background-attachment: local value is useful when you have an element with its own scrolling mechanism, and you want the background image to scroll along with the element's content, rather than the entire page."
+      },
+      "description": "The background-attachment property in CSS is used to control whether a background image scrolls with the content or stays fixed relative to the viewport."
+    },
+    "backgroundBlendMode": {
+      "propertyName": "background-blend-mode",
+      "keyword": [ "normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue",  "saturation", "color", "luminosity" ],
+      "keywordsDescription":{
+        "normal": "This is the default value. Background images are drawn one over the other with no blending effect."
+      },
+      "description": " Defines the blending mode for multiple background images or for blending images with the background color. These blending modes can create interesting visual effects and compositions by combining multiple background images or blending images with background colors."
+    },
+    "backgroundShorthand": {
+      "propertyName": "background",
+      "syntax": "background: [<background-image>] [<background-color>] [<background-position>]/[<background-size>] [<background-repeat>] [<background-origin>] [<background-clip>] [<background-attachment>] [<initial|inherit>];",
+      "description": "The background property in CSS is a shorthand property that allows you to set multiple background-related properties at once. It provides a convenient way to define various aspects of an element's background.",
+      "note1": "You don't have to specify all the values; you can include only the properties you want to set, and the rest will use their default values. The values should be specified in the order listed above, with the exception of background-size, which can be specified before or after background-position (separated by a forward slash /).",
+      "note2": "Use of the shorthand background property resets all previously set background property values, even if a value is not given. If you wish only to modify a background property value previously set, use a longhand property instead."
+    }
+  }
+}
