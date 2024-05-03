@@ -36,7 +36,7 @@
                 "lengthValue":{
                   "description": "You can specify the size of the gradient shapes using length values such as pixels (px), percentages (%), or any other valid CSS length unit."
                 },
-                "keyword":[ "closest-side", "closet-corner", "farthest-side", "farthest-corner"],
+                "keyword":[ "closest-side", "closet-corner", "farthest-side", "farthest-corner" ],
                 "keywordsDescription": {
                   "closestSide": "Specifies that the size of the gradient shapes should be equal to the shorter side of the element's bounding box.",
                   "closetCorner": "Specifies that the size of the gradient shapes should be equal to the distance from the center to the closest corner of the element's bounding box.",
@@ -146,7 +146,7 @@
       "keywordsDescription":{
         "normal": "This is the default value. Background images are drawn one over the other with no blending effect."
       },
-      "description": " Defines the blending mode for multiple background images or for blending images with the background color. These blending modes can create interesting visual effects and compositions by combining multiple background images or blending images with background colors."
+      "description": "Defines the blending mode for multiple background images or for blending images with the background color. These blending modes can create interesting visual effects and compositions by combining multiple background images or blending images with background colors."
     },
     "backgroundShorthand": {
       "propertyName": "background",
