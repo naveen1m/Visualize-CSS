@@ -1,0 +1,47 @@
+{
+  "width": {
+    "propertyName": "width",
+    "keyword": [ "auto", "min-content", "max-content", "fit-content",  "calc", "initial",  "inherit" ],
+    "keywordDescription": {
+      "auto": "The browser calculates the width",
+      "min-content":" Sets the width to the minimum size needed to fit the content",
+      "max-content":" Sets the width to the maximum size allowed by the content",
+      "fit-content": "The width expands to fit the content",
+      "initial": "Sets the width to its initial value",
+      "inherit": "The width is inherited from the parent element",
+      "calc": "This function in CSS allows you to perform calculations to determine the value of a property the expr can include ( + , - , * , / ) operators"
+    },
+    "maxWidth": {
+      "propertyName": "max-width",
+      "description": "Sets the maximum width of an element"
+    },
+    "minWidth": {
+      "propertyName": "min-width",
+      "description": "Sets the minimum width of an element"
+    },
+    "description": "The width property is used to set the horizontal width of an element's content area."
+  },
+  "height": {
+    "propertyName": "height",
+    "keyword": [ "auto", "min-content", "max-content", "fit-content","initial","inherit", "calc" ],
+    "keywordDescription": {
+      "auto": "The browser calculates the height",
+      "min-content":" Sets the height to the minimum size needed to fit the content",
+      "max-content":" Sets the height to the maximum size allowed by the content",
+      "fit-content": "The height expands to fit the content",
+      "initial": "Sets the height to its initial value",
+      "inherit": "The height is inherited from the parent element",
+      "calc": "This function in CSS allows you to perform calculations to determine the value of a property the expr can include + , - , * , / operators"
+      
+    },
+    "maxHeight": {
+      "propertyName": "max-height",
+      "description": "Sets the maximum height of an element"
+    },
+    "minHeight": {
+      "propertyName": "min-height",
+      "description": "Sets the minimum height of an element"
+    },
+    "description": "The height property is used to set the vertical height of an element's content area."
+  }
+}
