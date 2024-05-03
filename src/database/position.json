@@ -1,0 +1,31 @@
+{
+    "position": 
+      {
+        "propertyName" : "position",
+        "keyword": ["static", "relative", "absolute", "fixed", "sticky"],
+        "keywordsDescription": {
+           "static":{
+            "description": "The element is positioned according to the Normal Flow of the document. The top, right, bottom, left, and z-index properties have no effect. This is the default value.", 
+            "whenNotApplied": ["Not applicable on table elements (such as <table>, <tr>, <td>, etc.)"]
+           }, 
+           "relative":{
+            "description": "When an element is positioned relatively, it is positioned relative to its normal position in the document flow. This means that you can offset the element from its default position using the `top`, `right`, `bottom`, and `left` properties.", 
+            "whenNotApplied": ["Not applicable on table elements (such as <table>, <tr>, <td>, etc.)"]
+           }, 
+           "absolute":{
+            "description": "The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its closest positioned ancestor (if any) or to the initial containing block. Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.", 
+            "whenNotApplied": ["Not applicable on table elements (such as <table>, <tr>, <td>, etc.)"]
+           }, 
+           "fixed":{
+            "description": "The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial containing block, which is the viewport in the case of visual media. Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.", 
+            "whenNotApplied": ["Not applicable on table elements (such as <table>, <tr>, <td>, etc.)"]
+           }, 
+           "sticky":{
+            "description": "The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block (nearest block-level ancestor), including table-related elements, based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements.", 
+            "whenNotApplied": ["Not applicable on table elements (such as <table>, <tr>, <td>, etc.)"]
+           }
+        }
+        
+      }
+  }
+  
