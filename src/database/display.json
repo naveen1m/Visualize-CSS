@@ -6,9 +6,7 @@
       "keywordsDescription": {
         "block": {
           "description": "The block property is used to render an element as a block-level element. Block-level elements typically start on a new line and take up the full width available, pushing subsequent elements to a new line",
-          "whenNotApplied": [
-            "parent div has display property: flex, inline-flex, none, grid, inline-grid."
-          ]
+          "whenNotApplied": ["parent div has display property: flex, inline-flex, none, grid, inline-grid."]
         },
         "inline": {
           "description": "The inline property is used to render an element as an inline-level element. Inline-level elements do not start on a new line and only take up as much width as necessary.",
