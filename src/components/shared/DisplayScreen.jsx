@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Tooltip } from 'flowbite-react';
+
 function DisplayScreen({ component: PropComponent, screenDesc, bgColor }) {
   return (
     <>
