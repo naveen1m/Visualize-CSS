@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import EditableList from './List'
+import EditableList from './RenderList'
 import DisplayScreen from './DisplayScreen'
 
 function CSSPlayground({ data, color1, color2, component: PropComponent, screenDesc, bgColor }) {
