@@ -1,9 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types'
+import { useSelector, useDispatch } from 'react-redux'
+import { updateData } from "../../store/cssProperties-slice";
 
 const EditableList = ({ data, color1, color2 }) => {
   const [items, setItems] = useState(data);
   const [activeLabel, setActiveLabel] = useState(0);
+  const dispatch = useDispatch();
+  const newData = useSelector((state)=> state.cssProperties.data);
+
+  // console.log("newData: ", newData);
+
+
+
   const handleComponentClick = (index) => {
     setActiveLabel(index);
   };
@@ -16,6 +25,14 @@ const EditableList = ({ data, color1, color2 }) => {
     newItems[index] = newValue;
     setItems(newItems);
   };
+  const handleUpdateData = ()=>{
+    dispatch(updateData(items));
+  }
+
+  useEffect(()=>{
+    handleUpdateData();
+  },[items]);
+
   color1 = color1 == null ? "#6faaff" : color1;
   color2 = color2 == null ? "#ecc473" : color2;
   return (
@@ -82,10 +99,10 @@ const EditableList = ({ data, color1, color2 }) => {
   );
 };
 
-EditableList.propTypes = {
-  data: PropTypes.elementType.isRequired,
-  color1: PropTypes.any,
-  color2: PropTypes.any,
-}
+// EditableList.propTypes = {
+//   data: PropTypes.elementType.isRequired,
+//   color1: PropTypes.any,
+//   color2: PropTypes.any,
+// }
 
 export default EditableList;

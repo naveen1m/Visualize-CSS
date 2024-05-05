@@ -16,10 +16,10 @@ function DescriptionBox({ descText, bgColor, textColor }) {
 }
 
 // prop type validation
-DescriptionBox.propTypes = {
-    descText: PropTypes.elementType.isRequired,
-    bgColor: PropTypes.string,
-    textColor: PropTypes.string
-};
+// DescriptionBox.propTypes = {
+//     descText: PropTypes.elementType.isRequired,
+//     bgColor: PropTypes.string,
+//     textColor: PropTypes.string
+// };
 
 export default DescriptionBox

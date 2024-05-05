@@ -17,13 +17,13 @@ function CSSPlayground({ data, color1, color2, component: PropComponent, screenD
   )
 }
 
-CSSPlayground.propTypes = {
-  data: PropTypes.elementType.isRequired,
-  color1: PropTypes.any,
-  color2: PropTypes.any,
-  component: PropTypes.elementType.isRequired,
-  screenDesc: PropTypes.elementType.isRequired,
-  bgColor: PropTypes.string
-};
+// CSSPlayground.propTypes = {
+//   data: PropTypes.elementType.isRequired,
+//   color1: PropTypes.any,
+//   color2: PropTypes.any,
+//   component: PropTypes.elementType.isRequired,
+//   screenDesc: PropTypes.elementType.isRequired,
+//   bgColor: PropTypes.string
+// };
 
 export default CSSPlayground
