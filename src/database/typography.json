@@ -1,6 +1,7 @@
 {
     "font": {
-    "fontfamily": {
+    "fontFamily": {
+        "propertyName": "font-family",
         "keyword": [ "system-ui", "Arial", "Courier New", "Georgia", "Verdana", "Tahoma", "Serif", "Sans-serif", "Monospace", "Courier New", "Courier", "monospace", "Cursive", "'Brush Script MT'", "cursive", "Fantasy", "Copperplate", "Papyrus", "fantasy", "emoji", "math", "fangsong", "inherit" ],
         "keywordDescription": {
             "system-ui": "Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.",
@@ -25,7 +26,8 @@
         "description":"The font-family property in CSS is used to specify the font or font family for the text content of an element. It allows you to set a prioritized list of font names or generic font families."
     },
 
-    "fontweight": {
+    "fontWeight": {
+        "propertyName": "font-weight",
         "keyword": [ "normal", "bold", "bolder", "lighter", "100", "900" ],
         "keywordDescription": {
             "normal": "Normal font weight. Same as 400",
@@ -38,7 +40,8 @@
         "description": "The font-weight property in CSS is used to set the weight or thickness of the font being used for the text content of an element. It allows you to control the boldness or lightness of the font."
     },
 
-    "fontstyle": {
+    "fontStyle": {
+        "propertyName": "font-style",
         "keyword": [ "oblique", "normal", "italic", "initial" ],
         "keywordDescription": {
             "oblique": "Selects a font that is classified as oblique. If no oblique version of the face is available, one classified as italic is used instead. If neither is available, the style is artificially simulated",
@@ -47,10 +50,63 @@
             "initial": "This property value of the font-style property is used to make the font oblique. Oblique fonts are the sloped versions of the font. initial. Using this value, the browser will display the initial font style that is the default. Basically, this value sets the property to its default value."
         },
         "description": "it is used to specify the style of the font for text elements"
+    },
+
+    "fontStretch":{
+        "propertyName": "font=stretch",
+        "keyword":[ "normal", "ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "semi-expanded", "expanded", "extra-expanded", "ultra-expanded" ],
+        "keywordDescription":{
+            "normal": "The default font stretch. No additional stretching is applied.",
+            "ultra-condensed": "The most condensed font stretch available.",
+            "extra-condensed": "More condensed than condensed, but less than ultra-condensed.",
+            "condensed": "More condensed than semi-condensed, but less than extra-condensed.",
+            "semi-condensed": "Less condensed than condensed, but more than normal.",
+            "semi-expanded": "Less expanded than expanded, but more than normal.",
+            "expanded": "More expanded than semi-expanded, but less than extra-expanded.",
+            "extra-expanded": "More expanded than expanded, but less than ultra-expanded.",
+            "ultra-expanded": "The most expanded font stretch available."
+        },
+        "percentageValue":[ "50%", "100%", "200%" ],
+        "percentageValueDescription":{
+            "50%": "A font stretch of 50% of the normal width.",
+            "100%": "The normal font stretch.",
+            "200%": "A font stretch of 200% of the normal width."
+        },
+        "globalValue":[ "inherit", "initial", "revert", "revert-layer", "unset" ],
+        "globalValueDescription":{
+            "inherit": "Specifies that the font stretch should be inherited from the parent element.",
+            "initial": "Sets the font stretch to its default value.",
+            "revert": "Sets the font stretch to its parent value if one is present, otherwise sets it to its initial value.",
+            "revert-layer": "Reverts the value of the property for the current layer to the value of the property of the parent element.",
+            "unset": "Resets the font stretch to its inherited value if it inherits from its parent, otherwise it sets it to its initial value."
+        },
+        "description":"The font-stretch property in CSS controls the relative width of a font. It can make text narrower (condensed) or wider (expanded) compared to the normal width."
+    },
+
+    "fontVariant": {
+        "propertyName": "font-varient",
+        "keyword": [ "normal", "small-caps", "all-small-caps", "petite-caps", "all-petite-caps", "unicase", "titling-caps" ],
+        "keywordDescription": {
+            "normal": "Specifies a normal font face.",
+            "small-caps": "Specifies a font that is displayed in small-caps.",
+            "all-small-caps": "Specifies a font that is displayed in small-caps, including the numbers and punctuation characters.",
+            "petite-caps": "Specifies a font that is displayed in petite-caps.",
+            "all-petite-caps": "Specifies a font that is displayed in petite-caps, including the numbers and punctuation characters.",
+            "unicase": "Specifies a font that uses a mixture of small-caps and lowercase letters.",
+            "titling-caps": "Specifies a font that is displayed using titling capitals."
+        },
+        "globalValue": [ "inherit","initial","unset" ],
+        "globalValueDescription": {
+            "inherit": "Specifies that the value of the property should be inherited from the parent element.",
+            "initial": "Sets the value of the property to its default value.",
+            "unset": "Resets the value of the property to its inherited value if it inherits from its parent, otherwise it sets it to its initial value."
+        },
+        "description": "The font-variant property in CSS is used to specify whether or not a text should be displayed in a small-caps font."
     }
+    
 },
 "text": {
-    "textdecoration": {
+    "textDecoration": {
         "propertyName": "text-decoration",
         "keyword": [ "overline", "line-through", "underline", "overline underline", "underline dotted", "underline dotted red", "underline overline #FF3028" ],
         "keywordDescription": {
@@ -63,6 +119,189 @@
             "underline overline #FF3028": "it allows you to apply multiple text decorations to an element, including both underlines and overlines, and specify their color using hexadecimal color codes like #FF3028"
         },
         "description": "It is used to add decorative lines to text elements, such as underlines, overlines, line-throughs, and even blink effects"
+    },
+
+    "textAlign": {
+        "propertyName": "text-align",
+        "keyword": [ "left", "right", "center", "justify", "justify-all", "start", "end", "match-parent" ],
+        "keywordDescription": {
+            "left": "Aligns the text to the left.",
+            "right": "Aligns the text to the right.",
+            "center": "Centers the text.",
+            "justify": "Justifies the text. Lines are justified to both left and right edges.",
+            "justify-all": "Justifies the text. Lines are justified to both left and right edges, even if the last line is not full.",
+            "start": "The same as left if direction is left-to-right and right if direction is right-to-left.",
+            "end": "The same as right if direction is left-to-right and left if direction is right-to-left.",
+            "match-parent": "Aligns the text like the parent element."
+        },
+        "globalValue": [ "inherit","initial","unset" ],
+        "globalValueDescription": {
+            "inherit": "Specifies that the value of the property should be inherited from the parent element.",
+            "initial": "Sets the value of the property to its default value.",
+            "unset": "Resets the value of the property to its inherited value if it inherits from its parent, otherwise it sets it to its initial value."
+        },
+        "description": "The text-align property in CSS is used to set the horizontal alignment of a text."
+    },
+
+    "textTransform": {
+        "propertyName": "text-transform",
+        "keyword": [ "none", "capitalize", "uppercase", "lowercase", "full-width" ],
+        "keywordDescription": {
+            "none": "Default value. No capitalization. The text renders as it is.",
+            "capitalize": "Transforms the first character of each word to uppercase.",
+            "uppercase": "Transforms all characters to uppercase.",
+            "lowercase": "Transforms all characters to lowercase.",
+            "full-width": "Puts each character of the text into a full-width equivalent."
+        },
+        "globalValue": [ "inherit","initial","unset" ],
+        "globalValueDescription": {
+            "inherit": "Specifies that the value of the property should be inherited from the parent element.",
+            "initial": "Sets the value of the property to its default value.",
+            "unset": "Resets the value of the property to its inherited value if it inherits from its parent, otherwise it sets it to its initial value."
+        },
+        "description": "The text-transform property in CSS is used to specify how to capitalize text."
+    },
+
+    "textOrientation": {
+        "propertyName": "text-orientation",
+        "keyword": [ "mixed", "upright", "sideways", "sideways-right", "use-glyph-orientation" ],
+        "keywordDescription": {
+            "mixed": "Selects the writing mode that mixes vertical and horizontal text. Vertical text in the same element remains vertical; horizontal text remains horizontal.",
+            "upright": "Selects vertical writing mode for the element.",
+            "sideways": "Selects sideways writing mode for the element.",
+            "sideways-right": "Selects sideways-right writing mode for the element.",
+            "use-glyph-orientation": "Selects the same mode as the writing-mode property for the element, unless that mode would mix vertical and horizontal text; in that case, it selects upright."
+        },
+        "globalValue": [ "inherit", "initial", "upset" ],
+        "globalValueDescription": {
+            "inherit": "Specifies that the value of the property should be inherited from the parent element.",
+            "initial": "Sets the value of the property to its default value.",
+            "unset": "Resets the value of the property to its inherited value if it inherits from its parent, otherwise it sets it to its initial value."
+        },
+        "description": "The text-orientation property in CSS is used to set the orientation of the text characters in a line.  It only affects text in vertical mode (when writing-mode is not horizontal-tb)"
+    },
+
+    "textOverflow": {
+        "propertyName": "text-overflow",
+        "keyword": [ "clip","ellipsis","string" ],
+        "keywordDescription": {
+            "clip": "Specifies that the text should be clipped when it overflows the element's box.",
+            "ellipsis": "Specifies that the text should be clipped and an ellipsis (...) should be drawn to represent the clipped text.",
+            "string": "Specifies a string to be displayed when the text is clipped, instead of the default ellipsis."
+        },
+
+        "description": "The text-overflow property in CSS specifies how overflowed content that is not displayed should be signaled to the user."
+    },
+
+    "textShadow": {
+        "propertyName": "text-shadow",
+        "keyword": [ "1px 1px 2px pink", "#FC0 1px 0 10px", "5px 5px #558ABB", "red 2px 5px", "5px 10px", "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue" ],
+        "keywordDescription":{
+            "1px 1px 2px pink": "Specifies a shadow with a horizontal offset of 1px, a vertical offset of 1px, a blur radius of 2px, and a pink color.",
+            "#FC0 1px 0 10px": "Specifies a shadow with a horizontal offset of 1px, no vertical offset (0), a blur radius of 10px, and a color of #FC0.",
+            "5px 5px #558ABB": "Specifies a shadow with a horizontal offset of 5px, a vertical offset of 5px, no blur radius (default), and a color of #558ABB.",
+            "red 2px 5px": "Specifies a shadow with a horizontal offset of 2px, a vertical offset of 5px, no blur radius (default), and a color of red.",
+            "5px 10px": "Specifies a shadow with a horizontal offset of 5px, a vertical offset of 10px, no blur radius (default), and a color that is not specified (default).",
+            "1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue": "Specifies multiple shadows: one with a horizontal offset of 1px, a vertical offset of 1px, a blur radius of 2px, and a red color; another with no offset (0), no blur radius (0), a size of 1em, and a blue color; and another with no offset (0), no blur radius (0), a size of 0.2em, and a blue color."
+        },
+        "description": "It adds a shadow effect to text, allowing you to control its offset, blur radius, and color. "
     }
+    
+},
+
+"line": {
+    "lineHeight": {
+        "propertyName": "line-height",
+        "keyword": [ "normal", "2.5", "3em", "150%", "32px" ],
+        "keywordDescription":{
+            "normal": "Specifies a normal line height.",
+            "2.5": "Specifies a line height of 2.5 times the font size.",
+            "3em": "Specifies a line height of 3 times the font size.",
+            "150%": "Specifies a line height of 150% of the font size.",
+            "32px": "Specifies a line height of 32 pixels."
+        },
+        "description": "The line-height property in CSS specifies the height of a line box."
+    }
+},
+
+"spacing": {
+    "letterSpacing":{
+        "propertyName": "letter-spacing",
+        "keyword": [ "normal", ".2rem", "1px", "-1px" ],
+        "keywordDescription":{
+            "normal": "Specifies normal spacing between characters.",
+            ".2rem": "Specifies spacing of 0.2 rem between characters.",
+            "1px": "Specifies spacing of 1 pixel between characters.",
+            "-1px": "Specifies spacing of -1 pixel between characters, which can result in character overlap."
+        },
+        "description": "The letter-spacing property in CSS controls the amount of space between characters in a text."
+    },
+
+    "wordSpacing":{
+        "propertyName": "word-spacing",
+        "keyword":[ "noraml", "1rem", "4px", "-.4ch" ],
+        "keywordDescription":{
+            "normal": "Specifies normal spacing between words.",
+            "1rem": "Specifies spacing of 1 rem between words.",
+            "4px": "Specifies spacing of 4 pixels between words.",
+            "-.4ch": "Specifies negative spacing of 0.4 character widths between words."
+        },
+        "description": "The word-spacing property in CSS controls the amount of space between words in a text."
+    },
+
+    "whiteSpace": {
+        "propertyName": "white-space",
+        "keyword": [ "normal","nowrap","pre","pre-line","pre-wrap","break-spaces" ],
+        "keywordDescription": {
+            "normal": "Collapses whitespace as for normal, but suppresses line breaks (text wrapping) within the source.",
+            "nowrap": "Collapses whitespace as for normal but suppresses line breaks (text wrapping) within the source.",
+            "pre": "Whitespace is preserved by the browser. Text will only wrap on line breaks.",
+            "pre-line": "Sequences of whitespace are collapsed. Lines are broken at newline characters, at <br>, and as necessary to fill line boxes.",
+            "pre-wrap": "Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks.",
+            "break-spaces": "The behavior is identical to that of pre-wrap, except that any sequence of preserved white space always takes up space, including at the end of the line."
+        },
+        "description": "The white-space property in CSS controls how whitespace inside an element is handled."
+    },
+
+    "wordBreak": {
+        "propertyName": "word-break",
+        "keyword": [ "normal", "break-all", "keep-all", "break-word" ],
+        "keywordDescription": {
+            "normal": "Words break according to their usual rules.",
+            "break-all": "Lines may break between any two letters.",
+            "keep-all": "Word breaks should not be used for Chinese/Japanese/Korean (CJK) text. Non-CJK text behavior is the same as for normal.",
+            "break-word": "An unbreakable (or a word with a NO-BREAK SPACE) string of characters may be broken at an arbitrary point if there are no otherwise acceptable break points in the line."
+        },
+        "description": "The word-break property in CSS is used to specify how (or if) to break lines within words."
+    }
+    
+    
+},
+
+"directions": {
+    "direction": {
+        "propertyName": "direction",
+        "keyword": [ "ltr","rtl" ],
+        "keywordDescription": {
+            "ltr": "Specifies left-to-right text direction, which is the default.",
+            "rtl": "Specifies right-to-left text direction, often used for languages such as Arabic or Hebrew."
+        },
+        "description": "The direction property in CSS specifies the text direction/writing direction within a block-level element."
+    },
+    
+    "writingMode": {
+        "propertyName": "writing-mode",
+        "keyword": [ "horizontal-tb","vertical-rl","vertical-lr","sideways-rl","sideways-lr" ],
+        "keywordDescription": {
+            "horizontal-tb": "Horizontal writing mode. Text is written horizontally, then flows to the next line below.",
+            "vertical-rl": "Vertical writing mode. Text is written vertically, from right to left. The next line starts to the left of the previous line.",
+            "vertical-lr": "Vertical writing mode. Text is written vertically, from left to right. The next line starts to the right of the previous line.",
+            "sideways-rl": "Vertical writing mode. Text is written sideways, from top to bottom and from right to left.",
+            "sideways-lr": "Vertical writing mode. Text is written sideways, from top to bottom and from left to right."
+        },
+        "description": "The writing-mode property in CSS specifies the direction in which lines of text are stacked, as well as the direction in which block-level elements layout their children."
+    }  
 }
+
 }
+
