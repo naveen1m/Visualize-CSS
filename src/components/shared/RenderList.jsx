@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from 'prop-types'
 
 const EditableList = ({ data, color1, color2 }) => {
   const [items, setItems] = useState(data);
@@ -40,7 +41,7 @@ const EditableList = ({ data, color1, color2 }) => {
         `}
       </style>
       <ul className="editable-list overflow-y-scroll">
-        {items.map((item, index) => {
+        {items?.map((item, index) => {
           let [beforeColon, afterColon] = item.split(":");
           afterColon = afterColon == null ? "" : afterColon;
           return (
@@ -80,5 +81,11 @@ const EditableList = ({ data, color1, color2 }) => {
     </div>
   );
 };
+
+EditableList.propTypes = {
+  data: PropTypes.elementType.isRequired,
+  color1: PropTypes.any,
+  color2: PropTypes.any,
+}
 
 export default EditableList;

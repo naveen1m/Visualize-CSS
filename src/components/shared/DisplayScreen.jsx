@@ -1,25 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Tooltip } from 'flowbite-react';
+
 function DisplayScreen({ component: PropComponent, screenDesc, bgColor }) {
   return (
     <>
     <section>
         <div 
-        className="shadow-xl"
+        className="shadow-xl w-[45rem] h-[33rem] mt-6 overflow-scroll p-4 border-2 border-black rounded "
         style={{
-            width: "500px", height: "400px",
-            overflow: "scroll",
-            backgroundColor: bgColor || "beige",
-            padding: "10px",
-            border: "2px solid black",
-            borderRadius: "15px",
+            backgroundColor: bgColor || "beige"
         }}>
             <PropComponent />
         </div>
 
-        <div>
-        <Tooltip className='w-1/3' content={screenDesc} trigger='hover' style='auto' placement='bottom' animation='duration-500' arrow={true}  >
+        <div className="block overflow-clip z-50">
+        <Tooltip className="w-2/5 text-black " content={screenDesc} trigger='hover' style='auto' placement='bottom' animation='duration-500' arrow={true}  >
         <p className="mt-1 ml-3 text-red-700 underline underline-offset-4 hover:no-underline">what&apos;s on the screen</p>
         </Tooltip>
        
