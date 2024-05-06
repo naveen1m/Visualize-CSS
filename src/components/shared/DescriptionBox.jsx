@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function DescriptionBox({ descText, bgColor, textColor }) {
+function DescriptionBox({ title, descText, bgColor, textColor }) {
   return (
     <>
      <div>
-        <p className="text-xl text-black font-semibold underline underline-offset-4">Description</p>
+        <p className="text-xl text-black font-semibold underline underline-offset-4">{title}</p>
         <p className="text-lg" style={{
             backgroundColor: bgColor || "transparent",
             color: textColor || 'black'
