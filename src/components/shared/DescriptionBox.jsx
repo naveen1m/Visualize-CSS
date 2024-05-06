@@ -6,7 +6,7 @@ function DescriptionBox({ title, descText, bgColor, textColor }) {
     <>
      <div>
         <p className="text-xl text-black font-semibold underline underline-offset-4">{title}</p>
-        <p className="text-lg" style={{
+        <p className="text-lg mb-5" style={{
             backgroundColor: bgColor || "transparent",
             color: textColor || 'black'
         }}>{descText}</p>
