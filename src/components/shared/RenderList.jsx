@@ -11,8 +11,6 @@ const EditableList = ({ data, color1, color2 }) => {
 
   // console.log("newData: ", newData);
 
-
-
   const handleComponentClick = (index) => {
     setActiveLabel(index);
   };
@@ -34,7 +32,10 @@ const EditableList = ({ data, color1, color2 }) => {
   useEffect(()=>{
     handleUpdateActiveValue();
   },[activeLabel])
+
+  newData.length == 0 && handleUpdateData();
   useEffect(()=>{
+    console.log("inside items update")
     handleUpdateData();
   },[items]);
 
