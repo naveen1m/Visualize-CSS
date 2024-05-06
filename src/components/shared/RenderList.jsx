@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from 'prop-types'
 import { useSelector, useDispatch } from 'react-redux'
-import { updateData } from "../../store/cssProperties-slice";
+import { selectData, updateData } from "../../store/cssProperties-slice";
 
 const EditableList = ({ data, color1, color2 }) => {
   const [items, setItems] = useState(data);
@@ -28,7 +28,12 @@ const EditableList = ({ data, color1, color2 }) => {
   const handleUpdateData = ()=>{
     dispatch(updateData(items));
   }
-
+  const handleUpdateActiveValue = ()=>{
+    dispatch(selectData(activeLabel))
+  }
+  useEffect(()=>{
+    handleUpdateActiveValue();
+  },[activeLabel])
   useEffect(()=>{
     handleUpdateData();
   },[items]);
