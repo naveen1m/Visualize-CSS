@@ -1,18 +1,17 @@
 {
     "Float": {
-        "keyword": ["none", "left", "right", "inline-start", "inline-end", "inherit"],
+        "keyword": ["none", "left", "right", "inline-start", "inline-end"],
         "keywordDescription":{
             "none": "The element does not float, (will be displayed just where it occurs in the text). This is default.",
             "left": "The element floats to the left of its container. ",
             "right": "The element floats the right of its container.",
             "inline-start": "The element must float on the start side of its containing block. That is theleft side with ltr scripts, and the right side with rtl scripts.",
-            "inline-end": "The element must float on the end side of its containing block. That is the right side with ltr scripts, and the left side with rtl scripts.",
-            "inherit": "It is used to inherit the 'float' property value from the element's parent element. Here the parent element's float propert is none."
+            "inline-end": "The element must float on the end side of its containing block. That is the right side with ltr scripts, and the left side with rtl scripts."
         },
         "description": "The float property is used to move an element to the left or right within its container, allowing other elements to wrap around it."
     },
     "Clear":{
-        "keyword": ["none", "left", "right", "both", "inherit" ],
+        "keyword": ["none", "left", "right", "both" ],
         "keywordDescription":{
             "none":  "It is a keyword indicating that the element is not moved down to clear past floating elements.",
             "left": "The element will not be allowed to float on the left side of any floated elements. It will move below any floated elements on the left. ",

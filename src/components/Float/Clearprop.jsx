@@ -7,14 +7,17 @@ import { useSelector } from "react-redux";
 
 function Clearprop() {
   const value = useSelector((state)=> state.cssProperties.activeValue);
+  console.log("value in clearprop is = ", value);
   const data = floatAndClear.Clear.keyword.map(
     (keyword) => `clear: ${keyword}`
   );
-  // console.log(data)
+  if (!Array.isArray(data) || value.index < 0 || value.index >= data.length) {
+    console.error("Invalid data or activeValue in Redux state.");
+    return null;
+  }
   const [key, keyvalue] =  data[value].split(":"); 
   let trimmedkeyvalue = keyvalue.trim();
   const keywordDesc = floatAndClear.Clear.keywordDescription[trimmedkeyvalue];
-  // console.log("keyword desc is : ",keywordDesc);
   const descrText = <>
   <p className=' text-xl font-serif tracking-wider text-black  pl-4  ml-12 mt-4'>The <span className='text-red-500'>clear</span> property controls the flow next to floated elements.</p>
   <p className=' text-xl font-serif tracking-wider text-black  pl-4  ml-12 mt-4'>The <span className='text-red-500'>clear</span> property specifies what should happen with the element that is next to a floating element.</p>
@@ -26,7 +29,7 @@ function Clearprop() {
     
 <h1 className='font-serif tracking-wider text-black  pl-4 font-bold  ml-12 mt-12'>Clear</h1>
 
-    <DescriptionBox title={"Info"} descText={descrText} />
+    <DescriptionBox title={"Description"} descText={descrText} />
       <CSSPlayground
         data={data}
         component={ClearComponent}
@@ -43,8 +46,12 @@ export default Clearprop;
 const ClearComponent = () => {
   const value = useSelector((state)=> state.cssProperties.activeValue)
   const data = useSelector((state)=> state.cssProperties.data);
-  // console.log("val", value, "data",data)
+  if (!Array.isArray(data) || value.index < 0 || value.index >= data.length) {
+    console.error("Invalid data or activeValue in Redux state.");
+    return null;
+  }
   const [clear, keyword] =  data[value].split(":");
+  
 
 
   return (
