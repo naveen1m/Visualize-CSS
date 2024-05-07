@@ -1,45 +1,127 @@
 {
-    "marginAbsoluteproperty": [
+    "margin": [
       {
-        "propertyName": "margin",
+        "propertyName": "margin : 10px",
         "description": "the margin property defines the space outside the border of an element. It controls the amount of space between an element's border and adjacent elements in the layout.",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       },
       {
-        "propertyName": "marginTop",
+        "propertyName": "margin: 10px 10px 10px 10px;",
+        "description": "margin: top right bottom left. Used to set the margins for all four sides of an element individually",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "margin: 10px 10px 10px;",
+        "description": "margin: top x-axis bottom. Here \"top\" Specifies the margin for the top side of the element, \"x-axis\" Specifies the margin for the right and left sides of the element and \"bottom\"  Specifies the margin for the bottom side of the element. ",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "margin: 10px 10px;",
+        "description": "margin: y-axis x-axis. Here \"y-axis\" Specifies the margin for the top and bottom sides of the element and \"x-axis\" Specifies the margin for the left and right sides of the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "marginTop : 10px",
         "description": "Sets the margin above the element.",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       },
       {
-        "propertyName": "marginRight",
+        "propertyName": "marginRight : 10px",
         "description": "Sets the margin to the right of the element.",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       },
       {
-        "propertyName": "marginBottom",
+        "propertyName": "marginBottom : 10px",
         "description": "Sets the margin below the element.",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       },
       {
-        "propertyName": "marginLeft",
+        "propertyName": "marginLeft : 10px",
         "description": "Sets the margin to the left of the element.",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       }
     ],
-    "marginShorthandproperty": [
+    "padding": [
       {
-        "propertyName": "margin: top right bottom left;",
-        "description": "used to set the margins for all four sides of an element individually",
+        "propertyName": "padding : 10px",
+        "description": "the padding property defines the space outside the border of an element. It controls the amount of space between an element's border and adjacent elements in the layout.",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       },
       {
-        "propertyName": "margin: top x-axis bottom ;",
-        "description": "here \"top\" Specifies the margin for the top side of the element, \"x-axis\" Specifies the margin for the right and left sides of the element and \"bottom\"  Specifies the margin for the bottom side of the element. ",
+        "propertyName": "padding: 10px 10px 10px 10px;",
+        "description": "padding: top right bottom left. Used to set the paddings for all four sides of an element individually",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       },
       {
-        "propertyName": "margin: y-axis x-axis;",
-        "description": "Here \"y-axis\" Specifies the margin for the top and bottom sides of the element and \"x-axis\" Specifies the margin for the left and right sides of the element.",
+        "propertyName": "padding: 10px 10px 10px;",
+        "description": "padding: top x-axis bottom. Here \"top\" Specifies the padding for the top side of the element, \"x-axis\" Specifies the padding for the right and left sides of the element and \"bottom\"  Specifies the padding for the bottom side of the element. ",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "padding: 10px 10px;",
+        "description": "padding: y-axis x-axis. Here \"y-axis\" Specifies the padding for the top and bottom sides of the element and \"x-axis\" Specifies the padding for the left and right sides of the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "paddingTop : 10px",
+        "description": "Sets the padding above the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "paddingRight : 10px",
+        "description": "Sets the padding to the right of the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "paddingBottom : 10px",
+        "description": "Sets the padding below the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "paddingLeft : 10px",
+        "description": "Sets the padding to the left of the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      }
+    ],
+    "border": [
+      {
+        "propertyName": "border : 10px",
+        "description": "the border property defines the space outside the border of an element. It controls the amount of space between an element's border and adjacent elements in the layout.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "border: 10px 10px 10px 10px;",
+        "description": "border: top right bottom left. Used to set the borders for all four sides of an element individually",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "border: 10px 10px 10px;",
+        "description": "border: top x-axis bottom. Here \"top\" Specifies the border for the top side of the element, \"x-axis\" Specifies the border for the right and left sides of the element and \"bottom\"  Specifies the border for the bottom side of the element. ",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "border: 10px 10px;",
+        "description": "border: y-axis x-axis. Here \"y-axis\" Specifies the border for the top and bottom sides of the element and \"x-axis\" Specifies the border for the left and right sides of the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "borderTop : 10px",
+        "description": "Sets the border above the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "borderRight : 10px",
+        "description": "Sets the border to the right of the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "borderBottom : 10px",
+        "description": "Sets the border below the element.",
+        "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
+      },
+      {
+        "propertyName": "borderLeft : 10px",
+        "description": "Sets the border to the left of the element.",
         "whenNotApplied": ["parent container has property : flex, inline-flex, none, grid, inline-grid.","When the element is : inline, absolute positioned, float"]
       }
     ]

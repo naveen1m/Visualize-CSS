@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from 'prop-types'
-import { useSelector, useDispatch } from 'react-redux'
+import React, { useEffect, useMemo, useState } from "react";
+import PropTypes from "prop-types";
+import { useSelector, useDispatch } from "react-redux";
 import { selectData, updateData } from "../../store/cssProperties-slice";
 
-const EditableList = ({ data, color1, color2 }) => {
+const EditableList = ({ data, title, color1, color2 }) => {
   const [items, setItems] = useState(data);
   const [activeLabel, setActiveLabel] = useState(0);
   const dispatch = useDispatch();
-  const newData = useSelector((state)=> state.cssProperties.data);
+  const datamap = useSelector((state) => state.cssProperties.data);
 
-  // console.log("newData: ", newData);
+  const localmap = new Map([...datamap]);
 
   const handleComponentClick = (index) => {
     setActiveLabel(index);
@@ -23,21 +23,23 @@ const EditableList = ({ data, color1, color2 }) => {
     newItems[index] = newValue;
     setItems(newItems);
   };
-  const handleUpdateData = ()=>{
-    dispatch(updateData(items));
-  }
-  const handleUpdateActiveValue = ()=>{
-    dispatch(selectData(activeLabel))
-  }
-  useEffect(()=>{
+  const handleUpdateData = () => {
+    localmap.set(title, items);
+    console.log("localmap", localmap);
+    dispatch(updateData(localmap));
+  };
+  const handleUpdateActiveValue = () => {
+    dispatch(selectData(activeLabel));
+  };
+  useEffect(() => {
     handleUpdateActiveValue();
-  },[activeLabel])
+  }, [activeLabel]);
 
-  newData.length == 0 && handleUpdateData();
-  useEffect(()=>{
-    console.log("inside items update")
+  localmap.size == 0 && handleUpdateData();
+  useEffect(() => {
+    console.log("inside items update");
     handleUpdateData();
-  },[items]);
+  }, [items]);
 
   color1 = color1 == null ? "#6faaff" : color1;
   color2 = color2 == null ? "#ecc473" : color2;
