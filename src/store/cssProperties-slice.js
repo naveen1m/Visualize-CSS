@@ -7,22 +7,23 @@ export const cssPropertiesSlice = createSlice({
   name: "cssProperties",
   initialState: {
     data: new Map([["key", "value"]]),
-    activeValue: 0,
+    activeValue: new Map([["default", 0]]),
   },
   reducers: {
     updateData: (state, action) => {
-      //   console.log("action", action.payload.title, action.payload.data);
-      //   console.log("state", state.data);
-      //   const newData = new Map();
-      //   state.set(action.payload.title, action.payload.data);
-      console.log("payload", action.payload);
-      state.data = action.payload;
-
+      const updatedMap = new Map([...state.data]);
+      updatedMap.set(action.payload.title, action.payload.data)
+      console.log("payload", updatedMap);
+      state.data = updatedMap;
       // console.log("size", state.data.size);
-      console.log("state after update", state.data);
+      // console.log("state after update", state.data);
     },
     selectData: (state, action) => {
-      state.activeValue = action.payload;
+      // console.log("select data",action.payload);
+      const activeIndexMap = new Map([...state.activeValue]);
+      activeIndexMap.set(action.payload.label, action.payload.index)
+      state.activeValue = activeIndexMap;
+      console.log("state.activeValue",state.activeValue)
     },
   },
 });
