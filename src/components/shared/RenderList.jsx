@@ -5,17 +5,18 @@ import { selectData, updateData } from "../../store/cssProperties-slice";
 
 const EditableList = ({ data, title, color1, color2 }) => {
   const [items, setItems] = useState(data);
-  const [activeLabel, setActiveLabel] = useState({label: "default", index: 0});
+  const [activeLabel, setActiveLabel] = useState({
+    label: "default",
+    index: 0,
+  });
   const [renderFirst, setRenderFirst] = useState(true);
   const dispatch = useDispatch();
   const datamap = useSelector((state) => state.cssProperties.data);
 
-
-const handleComponentClick = (index) => {
-  
-  setActiveLabel({label: title, index: index});
-  // console.log("active label function", activeLabel)
-};
+  const handleComponentClick = (index) => {
+    setActiveLabel({ label: title, index: index });
+    // console.log("active label function", activeLabel)
+  };
   const handleButtonClick = () => {
     setItems(data);
   };
@@ -25,7 +26,7 @@ const handleComponentClick = (index) => {
     setItems(newItems);
   };
   const handleUpdateData = () => {
-    dispatch(updateData({title: title, data: items}));
+    dispatch(updateData({ title: title, data: items }));
   };
   const handleUpdateActiveValue = () => {
     dispatch(selectData(activeLabel));
@@ -33,16 +34,15 @@ const handleComponentClick = (index) => {
   useEffect(() => {
     handleUpdateActiveValue();
   }, [activeLabel]);
-if(renderFirst){
-  // console.log("rendered for the first time only to save values in redux store")
-  handleUpdateData();
-  setRenderFirst(false)
-}
+  if (renderFirst) {
+    // console.log("rendered for the first time only to save values in redux store")
+    handleUpdateData();
+    setRenderFirst(false);
+  }
   useEffect(() => {
     console.log("redux store items update");
     handleUpdateData();
   }, [items]);
-
 
   color1 = color1 == null ? "#6faaff" : color1;
   color2 = color2 == null ? "#ecc473" : color2;
@@ -71,13 +71,17 @@ if(renderFirst){
       <ul className="editable-list overflow-y-scroll">
         {items?.map((item, index) => {
           let [beforeColon, afterColon] = item.split(":");
-          {/* console.log("beforeColor:", beforeColon) */}
+          {
+            /* console.log("beforeColor:", beforeColon) */
+          }
           afterColon = afterColon == null ? "" : afterColon;
           return (
             <li
               key={index}
-              className={`text-md py-2 rounded-lg m-2 font-semibold ${
-                activeLabel === activeLabel ? " bg-sky-900 " : " hover:bg-sky-950 "
+              className={`text-md py-2 rounded-lg m-2 font-semibold  ${
+                index === activeLabel.index
+                  ? " border-2 border-slate-300 bg-sky-900"
+                  : "  hover:bg-sky-950 "
               }`}
               onClick={() => handleComponentClick(index)}
             >
