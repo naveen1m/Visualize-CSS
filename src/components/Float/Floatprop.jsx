@@ -8,8 +8,8 @@ function Floatprop() {
   const data = floatAndClear.Float.keyword.map(
     (keyword) => `float: ${keyword}`
   );
-  const value = useSelector((state) => state.cssProperties.activeValue);
-  console.log("value in floatprop is = ", value);
+  const value = useSelector((state) => state.cssProperties.activeValue.get("float") || state.cssProperties.activeValue.get("default"));
+  console.log("active index in floatData is = ", value);
   const [key, keyvalue] = data[value].split(":");
   let trimmedkeyvalue = keyvalue.trim();
   const keywordDesc = floatAndClear.Float.keywordDescription[trimmedkeyvalue];
@@ -55,20 +55,13 @@ function Floatprop() {
 export default Floatprop;
 
 const FloatComponent = () => {
-  const value = useSelector((state) => state.cssProperties.activeValue);
+  const value = useSelector((state) => state.cssProperties.activeValue.get("float") || state.cssProperties.activeValue.get("default"));
   const data = useSelector((state) => state.cssProperties.data);
-  console.log("float mapData", data);
-  if (
-    !data ||
-    !Array.isArray(data) ||
-    value < 0 ||
-    value >= data.length ||
-    typeof data[value] !== "string"
-  ) {
-    console.error("Invalid data or activeValue in Redux state.");
-    return null;
-  }
-  const [key, keyVal] = data[value].split(":");
+  const floatData = useSelector((state) => state.cssProperties.data.get("float"));
+  // console.log("Saved mapData", mapData);
+  // console.log("clear map data: ", Array.isArray(floatData));
+
+  const [key, keyVal] = floatData[value].split(":");
 
   return (
     <>
