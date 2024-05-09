@@ -5,15 +5,11 @@ import DescriptionBox from "../shared/DescriptionBox";
 import { useSelector } from "react-redux";
 
 function Clearprop() {
-  const value = useSelector((state) => state.cssProperties.activeValue);
+  const value = useSelector((state) => state.cssProperties.activeValue.get("clear") || state.cssProperties.activeValue.get("default"));
   // console.log("value in clearprop is = ", value);
   const data = floatAndClear.Clear.keyword.map(
     (keyword) => `clear: ${keyword}`
   );
-  if (!Array.isArray(data) || value.index < 0 || value.index >= data.length) {
-    console.error("Invalid data or activeValue in Redux state.");
-    return null;
-  }
   const [key, keyvalue] = data[value].split(":");
   let trimmedkeyvalue = keyvalue.trim();
   const keywordDesc = floatAndClear.Clear.keywordDescription[trimmedkeyvalue];
@@ -52,16 +48,14 @@ function Clearprop() {
 export default Clearprop;
 
 const ClearComponent = () => {
-  const value = useSelector((state) => state.cssProperties.activeValue);
+  const value = useSelector((state) => state.cssProperties.activeValue.get("clear") || state.cssProperties.activeValue.get("default"));
   const mapData = useSelector((state) => state.cssProperties.data);
-  const data = useSelector((state) => state.cssProperties.data.get("clear"));
-  console.log("mapData", mapData);
-  console.log("map data: ", data);
-  if (!Array.isArray(data) || value.index < 0 || value.index >= data.length) {
-    console.error("Invalid data or activeValue in Redux state.");
-    return null;
-  }
-  const [clear, keyword] = data[value].split(":");
+  const clearData = useSelector((state) => state.cssProperties.data.get("clear"));
+  // console.log("Saved mapData", mapData);
+  // console.log("clear map data: ", Array.isArray(clearData));
+  console.log("active index in clearData is = ", value);
+
+  const [clear, keyword] = clearData[value].split(":");
 
   return (
     <>
